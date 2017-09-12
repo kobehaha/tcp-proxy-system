@@ -5,11 +5,15 @@ import (
 	"log"
 )
 
+// description
+// define default config
 const (
 	DefaultConfig  = "config/default.json"
 	DefaultLogFile = "proxy.log"
 )
 
+// descrition
+// main 
 func main() {
 
 	// prepare to start proxy server
