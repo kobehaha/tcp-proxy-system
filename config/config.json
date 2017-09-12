@@ -5,6 +5,7 @@
     "protocol": tcp,
     "request_queue_size": 400,
     "cpu_count": 2, 
+    "strage": "poll",
     "servers": {
         "node": {
             "ip": "192.168.1.1",
