@@ -4,7 +4,7 @@ package system
 import (
     "sync"
 //    "errors"
-//    "../util"
+    "../util"
 )
 
 //description
@@ -55,6 +55,21 @@ func (channelManager *ChannelManager) Put(channel *Channel){
     channelManager.mapSrc[channel.SrcUrl()] = channel
     channelManager.mapDst[channel.DstUrl()] = channel
     defer channelManager.mutex.Unlock() 
+}
+
+// description
+// channelManager del channel
+func (channelManager *ChannelManager) Delete(channel *Channel) {
+    channelManager.mutex.Lock()
+    index := util.SliceIndex(channelManager.channels, *channel)
+    if index >=0 {
+        //change slice value
+        channelManager.channels = append(channelManager.channels[:index], channelManager.channels[index+1:]...)
+        deleteMap(channelManager.mapSrc, channel.SrcUrl())
+        deleteMap(channelManager.mapDst, channel.SrcUrl())
+    }
+    defer channelManager.mutex.Unlock()
+
 }
 
 // description

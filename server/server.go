@@ -15,7 +15,7 @@ type ProxyServer struct {
 	beatime  int
 	listener net.Listener
 	on       bool
-    proxy    proxy.Proxy
+    proxy    *proxy.TcpProxy
 }
 
 // description
@@ -24,6 +24,7 @@ func (server *ProxyServer) Init() {
 	server.on = false
 	server.host = "127.0.0.1"
 	server.port = 1000
+    server.proxy = &proxy.TcpProxy{}
 }
 
 // description
@@ -51,7 +52,7 @@ func (server *ProxyServer) Start() {
 	server.on = true
 	for server.on {
 		con, err := server.listener.Accept()
-		if err == nil {
+		if (err == nil) {
 			log.Println("start -----> dispatch")
             go server.proxy.Dispatch(con)
 

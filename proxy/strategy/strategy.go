@@ -17,7 +17,7 @@ type Strategy interface {
 
 //description
 //init
-func Init() {
+func init() {
 	register[RandomName] = new(Random)
 }
 

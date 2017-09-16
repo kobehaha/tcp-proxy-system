@@ -18,7 +18,7 @@ func main() {
 
 	// prepare to start proxy server
 	log.Println("prepare to start server")
-	proxy := &server.ProxyServer{}
+    proxy := &server.ProxyServer{}
 	proxy.Init()
 	proxy.Start()
 
