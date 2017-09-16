@@ -13,36 +13,50 @@ const (
 	DefaultTimeoutTime = 3
 )
 
-//description
-//tcp proxy
+// description
+// tcp proxy
 type TcpProxy struct {
 	// data *ProxyData
 	strategy strategy.Strategy
 	data     *ProxyData
 }
 
-//description
-//set strategy
+// description
+// init TcpProxy
+func (proxy *TcpProxy) Init(){
+    proxy.setProxyData(&ProxyData{})
+    proxy.setStrategy("random")
+}
+
+
+// description
+// set strategy
 func (proxy *TcpProxy) setStrategy(name string) {
 	proxy.strategy = strategy.GetStrategy(name)
 	proxy.strategy.Init()
 }
 
-//description
-//set backend available
+// description
+// tcp proxy set data
+func (proxy *TcpProxy) setProxyData(proxyData *ProxyData) {
+    proxy.data = proxyData
+    proxy.data.Init()
+}
+
+// description
+// set backend available
 func (proxy *TcpProxy) isBackendAvailable() bool {
 	return true
 }
 
-//description
-//dispatch
+// description
+// dispatch
 func (proxy *TcpProxy) Dispatch(con net.Conn) {
 	// need check backends availabe
     log.Println("check availabe backends")
 	if proxy.isBackendAvailable() {
         servers := []string{"192.168.33.19:8000"}
         // set static ---> change dynamic
-        proxy.setStrategy("random")
 		url := proxy.strategy.Choose(con.RemoteAddr().String(), servers)
 		proxy.transfer(con, url)
 	} else {

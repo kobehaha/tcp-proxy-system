@@ -25,6 +25,7 @@ func (server *ProxyServer) Init() {
 	server.host = "127.0.0.1"
 	server.port = 1000
     server.proxy = &proxy.TcpProxy{}
+    server.proxy.Init()
 }
 
 // description
