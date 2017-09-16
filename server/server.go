@@ -2,6 +2,7 @@ package server
 
 import (
 	"../util"
+    "../proxy"
 	"log"
 	"net"
 )
@@ -14,6 +15,7 @@ type ProxyServer struct {
 	beatime  int
 	listener net.Listener
 	on       bool
+    proxy    proxy.Proxy
 }
 
 // description
@@ -48,9 +50,11 @@ func (server *ProxyServer) Start() {
 	server.listener = local
 	server.on = true
 	for server.on {
-		_, err := server.listener.Accept()
+		con, err := server.listener.Accept()
 		if err == nil {
 			log.Println("start -----> dispatch")
+            go server.proxy.Dispatch(con)
+
 		} else {
 			log.Println("client connect server error:")
 		}

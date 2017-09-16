@@ -12,7 +12,7 @@ var register = make(map[string]Strategy)
 //strategy
 type Strategy interface {
 	Init()
-	Chosse(client string, server []string) string
+	Choose(client string, server []string) string
 }
 
 //description

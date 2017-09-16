@@ -3,8 +3,8 @@ package system
 
 import (
     "sync"
-    "error"
-    "../util"
+//    "errors"
+//    "../util"
 )
 
 //description
@@ -13,7 +13,7 @@ type ChannelManager struct {
     channels []Channel
     mapSrc map[string]*Channel
     mapDst map[string]*Channel
-    mutex  *sysn.Mutex
+    mutex  *sync.Mutex
 }
 
 //description
@@ -38,7 +38,7 @@ func deleteMap(_map map[string]*Channel, url string){
 //description
 // channelManager clean
 func (channelManager *ChannelManager) Clean() {
-    for _, channel := range channelManager.channel {
+    for _, channel := range channelManager.channels {
         deleteMap(channelManager.mapSrc, channel.SrcUrl())
         deleteMap(channelManager.mapDst, channel.DstUrl())
         channel.Close()

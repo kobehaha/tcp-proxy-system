@@ -7,7 +7,7 @@ import "../util"
 // backend struct
 type Backend struct {
     Host string `json:"host"`
-    Port unit16 `json:"port"`
+    Port uint16 `json:"port"`
 }
 
 // description
