@@ -91,10 +91,14 @@ func (proxy *TcpProxy) safeCopy(from net.Conn, to net.Conn, sync chan int) {
 
 }
 
+// description
+// put Channel ---> manager
 func (proxy *TcpProxy) putChannel(channel *system.Channel) {
 	proxy.data.ChannelManager.Put(channel)
 }
 
+// description
+// close Channel
 func (proxy *TcpProxy) closeChannel(channel *system.Channel, sync chan int) {
 	for i := 0; i < system.ChannelPairNum; i++ {
 		<-sync

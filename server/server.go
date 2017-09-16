@@ -7,6 +7,10 @@ import (
 	"net"
 )
 
+const (
+    version = 5
+)
+
 // description
 // define proxyServer 
 type ProxyServer struct {
