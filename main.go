@@ -28,6 +28,7 @@ func main() {
     if err == nil {
         runtime.GOMAXPROCS(config.MaxProcessor)
         proxy := &server.ProxyServer{}
+        
         proxy.Init()
         proxy.Start()
     }
