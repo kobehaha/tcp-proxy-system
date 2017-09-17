@@ -14,3 +14,26 @@
 2017/09/17 12:44:58 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
 2017/09/17 12:44:58 server.go:63: start server and server address is :1001
 2017/09/17 12:44:58 server.go:68: proxy server start ok
+2017/09/17 13:35:39 server.go:78: client connect server error:
+2017/09/17 13:35:39 server.go:91: proxy stop success
+2017/09/17 13:35:39 server.go:103: proxy recevie stop signal
+2017/09/17 17:56:10 log.go:23: success create log file: logs/proxy.log
+2017/09/17 17:56:10 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 17:56:10 server.go:63: start server and server address is :1001
+2017/09/17 17:56:10 server.go:66: server start errorlisten tcp :1001: bind: permission denied
+2017/09/17 17:56:17 log.go:23: success create log file: logs/proxy.log
+2017/09/17 17:56:17 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 17:56:17 server.go:63: start server and server address is :1001
+2017/09/17 17:56:17 server.go:68: proxy server start ok
+2017/09/17 17:56:22 server.go:90: proxy stop success
+2017/09/17 17:56:22 server.go:101: proxy recevie stop signal
+2017/09/17 17:56:22 server.go:78: client connect server error:
+2017/09/17 18:08:05 log.go:23: success create log file: logs/proxy.log
+2017/09/17 18:08:05 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 18:08:05 server.go:63: start server and server address is :1001
+2017/09/17 18:08:05 server.go:66: server start errorlisten tcp :1001: bind: permission denied
+2017/09/17 18:08:10 log.go:23: success create log file: logs/proxy.log
+2017/09/17 18:08:10 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 18:08:10 server.go:63: start server and server address is :1001
+2017/09/17 18:08:10 server.go:68: proxy server start ok
+2017/09/17 18:08:13 server.go:78: client connect server error:

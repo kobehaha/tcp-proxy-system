@@ -8,6 +8,8 @@ import (
 
 //description
 // manager request channel
+// method1 ---> now
+// method2 ---> sync.pool manager channel
 type ChannelManager struct {
 	channels []Channel
 	mapSrc   map[string]*Channel
