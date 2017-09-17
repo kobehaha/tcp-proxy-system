@@ -2,6 +2,7 @@ package proxy
 
 import (
 	"../system"
+    "../config"
 	"./strategy"
 	//	"io"
 	"log"
@@ -23,9 +24,11 @@ type TcpProxy struct {
 
 // description
 // init TcpProxy
-func (proxy *TcpProxy) Init() {
-	proxy.setProxyData(&ProxyData{})
-	proxy.setStrategy("random")
+func (proxy *TcpProxy) Init(config *config.Config) {
+    //proxy.setProxyData(&ProxyData{})
+    proxy.data = new(ProxyData)
+    proxy.data.Init(config)
+	proxy.setStrategy(config.Strategy)
 }
 
 // description
@@ -36,16 +39,9 @@ func (proxy *TcpProxy) setStrategy(name string) {
 }
 
 // description
-// tcp proxy set data
-func (proxy *TcpProxy) setProxyData(proxyData *ProxyData) {
-	proxy.data = proxyData
-	proxy.data.Init()
-}
-
-// description
 // set backend available
 func (proxy *TcpProxy) isBackendAvailable() bool {
-	return true
+    return len(proxy.data.Backends) > 0
 }
 
 // description
@@ -55,7 +51,9 @@ func (proxy *TcpProxy) Dispatch(con net.Conn) {
 	log.Println("check availabe backends")
 	if proxy.isBackendAvailable() {
         //servers := []string{"192.168.33.19:8000"}
-        servers := []string{"127.0.0.1:21288"}
+        //servers := []string{"127.0.0.1:21288"}
+        servers := proxy.data.BackendUrls()
+        log.Println("servers----> ", servers )
 		// set static ---> change dynamic
 		url := proxy.strategy.Choose(con.RemoteAddr().String(), servers)
 		proxy.transfer(con, url)
@@ -70,9 +68,10 @@ func (proxy *TcpProxy) Dispatch(con net.Conn) {
 // transfer ---> client---> proxy--->backends
 func (proxy *TcpProxy) transfer(local net.Conn, remote string) {
 	remoteConn, err := net.DialTimeout("tcp", remote, DefaultTimeoutTime*time.Second)
+    log.Println("remote --->" , remote)
 	if err != nil {
 		local.Close()
-		log.Println("connect to endpint error: %s ", err)
+		log.Println("connect to endpint error:  ", err)
 		return
 	}
 	sync := make(chan int, 1)

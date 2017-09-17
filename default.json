@@ -1,16 +1,16 @@
 {
     "service": "proxy for tcp protocal, just as mysql , http ... ",
     "ip": "127.0.0.1",
-    "port": 100,
+    "port": 1000,
     "keepalive": 20,
     "protocol": "tcp",
     "requestqueuesize": 400,
     "maxprocessor": 2, 
-    "strategy": "poll",
+    "strategy": "random",
     "backends": [
      {
-        "ip": "192.168.33.19",
-        "port": 29
+        "host": "192.168.33.19",
+        "port": 8000 
      }
     ]
 }

@@ -3,6 +3,7 @@ package server
 import (
 	"../util"
     "../proxy"
+    "../config"
 	"log"
 	"net"
 )
@@ -16,7 +17,7 @@ const (
 type ProxyServer struct {
 	host     string
 	port     uint16
-	beatime  int
+	beattime  int
 	listener net.Listener
 	on       bool
     proxy    *proxy.TcpProxy
@@ -24,12 +25,21 @@ type ProxyServer struct {
 
 // description
 // init 
-func (server *ProxyServer) Init() {
+func (server *ProxyServer) Init(config *config.Config) {
 	server.on = false
-	server.host = "127.0.0.1"
-	server.port = 1000
+	//server.host = "127.0.0.1"
+	//server.port = 1000
+    server.host = config.Host
+    server.port = config.Port
+    server.beattime = config.Hearbeat
+    server.setProxy(config)
+}
+
+// descritpion 
+// set proxy 
+func (server *ProxyServer) setProxy(config *config.Config){
     server.proxy = &proxy.TcpProxy{}
-    server.proxy.Init()
+    server.proxy.Init(config)
 }
 
 // description
