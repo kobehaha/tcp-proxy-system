@@ -1,6 +1,0 @@
-2017/09/17 19:09:08 log.go:23: success create log file: logs/proxy.log
-2017/09/17 19:09:08 config.go:31: load config error: open /Users/kobe/Documents/go/tcp-proxy/bin/default.json: no such file or directory
-2017/09/17 19:09:08 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/bin/default.json
-2017/09/17 19:09:11 log.go:23: success create log file: logs/proxy.log
-2017/09/17 19:09:11 config.go:31: load config error: open /Users/kobe/Documents/go/tcp-proxy/bin/default.json: no such file or directory
-2017/09/17 19:09:11 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/bin/default.json

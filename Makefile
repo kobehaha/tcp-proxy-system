@@ -7,6 +7,10 @@ ifeq "$(GOPATH)" ""
 	$(error Please set the enviroment variable GOPATH before running `make`)
 endif 
 
+
+
+PREFIX=/Users/kobe/Documents/go/tcp-proxy
+BINDIR=${PREFEX}/bin
 PROJECT  := proxyd
 CUREDIR  := $(shell pwd)
 GO       := GO
@@ -26,14 +30,16 @@ build:
 
 ## exclude clean file exist
 .PHONY: cleanall cleanobj cleandiff clean
+.PHONY: install clean all 
 
 clean:
 	$(GO) clean -i ./...
-	rm -rf *.out
+	rm -rf $(GOBUILD) 
 
 
 test:
 	@echo 'now --> there is not exist ' 
 
-
+install: 
+	@echo 'now --> start to install ' 
 
