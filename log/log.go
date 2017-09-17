@@ -8,6 +8,8 @@ import (
 
 const LogDir = "logs"
 
+// description
+// init log file
 func Init(name string) {
 	filename := filepath.Join(LogDir, name)
 	os.MkdirAll(LogDir, os.ModePerm)
