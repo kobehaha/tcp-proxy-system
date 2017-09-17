@@ -1,7 +1,7 @@
 package config
 
 import (
-	"../system"
+	"github.com/kobehaha/tcp-proxy-system/system"
 	"encoding/json"
 	"log"
 	"os"

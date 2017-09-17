@@ -1,10 +1,10 @@
 package main
 
 import (
-	"./config"
-	"./log"
-	"./server"
-	"./util"
+	"github.com/kobehaha/tcp-proxy-system/config"
+	"github.com/kobehaha/tcp-proxy-system/log"
+	"github.com/kobehaha/tcp-proxy-system/server"
+	"github.com/kobehaha/tcp-proxy-system/util"
 	"path/filepath"
 	"runtime"
 )

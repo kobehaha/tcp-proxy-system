@@ -1,6 +1,6 @@
 package system
 
-import "../util"
+import "github.com/kobehaha/tcp-proxy-system/util"
 
 // descrition
 // backend struct
