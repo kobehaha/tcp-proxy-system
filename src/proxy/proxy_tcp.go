@@ -1,9 +1,9 @@
 package proxy
 
 import (
-	"github.com/kobehaha/tcp-proxy-system/config"
-	"github.com/kobehaha/tcp-proxy-system/system"
-	"github.com/kobehaha/tcp-proxy-system/strategy"
+	"../config"
+	"../system"
+	"./strategy"
 	//	"io"
 	"log"
 	"net"

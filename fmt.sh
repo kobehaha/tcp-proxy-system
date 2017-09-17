@@ -1,11 +1,11 @@
 #!/bin/bash
 
-CURDIR=$(pwd)
-
-GO=$(which go) 
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+GOBIN=/usr/local/go/bin/go
 echo "fmt all go file"
 
-GO fmt ./*.go
+$GOBIN fmt ./src/*.go
 
 
 

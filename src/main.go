@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/kobehaha/tcp-proxy-system/config"
-	"github.com/kobehaha/tcp-proxy-system/log"
-	"github.com/kobehaha/tcp-proxy-system/server"
-	"github.com/kobehaha/tcp-proxy-system/util"
+	"./config"
+	"./log"
+	"./server"
+	"./util"
 	"path/filepath"
 	"runtime"
 )
@@ -12,7 +12,7 @@ import (
 // description
 // define default config
 const (
-	DefaultConfigFile = "./default.json"
+	DefaultConfigFile = "../conf/default.json"
 	DefaultLogFile    = "proxy.log"
 )
 

@@ -3,7 +3,7 @@ package system
 import (
 	"sync"
 	//    "errors"
-	"github.com/kobehaha/tcp-proxy-system/util"
+	"../util"
 )
 
 //description
