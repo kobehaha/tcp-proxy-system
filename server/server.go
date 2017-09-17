@@ -1,55 +1,58 @@
 package server
 
 import (
+	"../config"
+	"../proxy"
 	"../util"
-    "../proxy"
-    "../config"
 	"log"
 	"net"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 const (
-    version = 5
+	version = 5
 )
 
 // description
-// define proxyServer 
+// define proxyServer
 type ProxyServer struct {
 	host     string
 	port     uint16
-	beattime  int
+	beattime int
 	listener net.Listener
 	on       bool
-    proxy    *proxy.TcpProxy
+	proxy    *proxy.TcpProxy
 }
 
 // description
-// init 
+// init
 func (server *ProxyServer) Init(config *config.Config) {
 	server.on = false
 	//server.host = "127.0.0.1"
 	//server.port = 1000
-    server.host = config.Host
-    server.port = config.Port
-    server.beattime = config.Hearbeat
-    server.setProxy(config)
+	server.host = config.Host
+	server.port = config.Port
+	server.beattime = config.Hearbeat
+	server.setProxy(config)
 }
 
-// descritpion 
-// set proxy 
-func (server *ProxyServer) setProxy(config *config.Config){
-    server.proxy = &proxy.TcpProxy{}
-    server.proxy.Init(config)
+// descritpion
+// set proxy
+func (server *ProxyServer) setProxy(config *config.Config) {
+	server.proxy = &proxy.TcpProxy{}
+	server.proxy.Init(config)
 }
 
 // description
 // read and parse from config file
 func (server *ProxyServer) LoadConfg() bool {
-    return true
+	return true
 }
 
 // description
-// get address from proxyServer 
+// get address from proxyServer
 func (server *ProxyServer) Address() string {
 	return util.HostPortToAddress(server.host, server.port)
 }
@@ -67,9 +70,9 @@ func (server *ProxyServer) Start() {
 	server.on = true
 	for server.on {
 		con, err := server.listener.Accept()
-		if (err == nil) {
+		if err == nil {
 			log.Println("start -----> dispatch")
-            go server.proxy.Dispatch(con)
+			go server.proxy.Dispatch(con)
 
 		} else {
 			log.Println("client connect server error:")
@@ -78,7 +81,6 @@ func (server *ProxyServer) Start() {
 	defer server.listener.Close()
 }
 
-
 // descrition
 // stop proxy server
 func (server *ProxyServer) Stop() {
@@ -86,4 +88,16 @@ func (server *ProxyServer) Stop() {
 	// server.proxy.Close()
 	server.on = false
 	log.Println("proxy stop success")
+}
+
+// description
+// watch ---> stop signal
+func (server *ProxyServer) WatchStopSignal() {
+	signal_channel := make(chan os.Signal, 1)
+	signal.Notify(signal_channel, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGKILL)
+	go func() {
+		<-signal_channel
+		server.Stop()
+		log.Println("proxy recevie stop signal")
+	}()
 }

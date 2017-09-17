@@ -1,0 +1,16 @@
+2017/09/17 12:44:16 log.go:21: success create log file: logs/proxy.log
+2017/09/17 12:44:16 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 12:44:16 server.go:63: start server and server address is :1000
+2017/09/17 12:44:16 server.go:66: server start errorlisten tcp :1000: bind: permission denied
+2017/09/17 12:44:22 log.go:21: success create log file: logs/proxy.log
+2017/09/17 12:44:22 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 12:44:22 server.go:63: start server and server address is :1000
+2017/09/17 12:44:22 server.go:66: server start errorlisten tcp :1000: bind: address already in use
+2017/09/17 12:44:35 log.go:21: success create log file: logs/proxy.log
+2017/09/17 12:44:35 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 12:44:35 server.go:63: start server and server address is :1000
+2017/09/17 12:44:35 server.go:66: server start errorlisten tcp :1000: bind: address already in use
+2017/09/17 12:44:58 log.go:21: success create log file: logs/proxy.log
+2017/09/17 12:44:58 config.go:40: success load config file: /Users/kobe/Documents/go/tcp-proxy/default.json
+2017/09/17 12:44:58 server.go:63: start server and server address is :1001
+2017/09/17 12:44:58 server.go:68: proxy server start ok

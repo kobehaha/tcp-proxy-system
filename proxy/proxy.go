@@ -1,11 +1,11 @@
 package proxy
 
 import (
-    "net"
+	"net"
 )
 
 //description
 //proxy interface
 type Proxy interface {
-    Dispatch(con net.Conn)
+	Dispatch(con net.Conn)
 }

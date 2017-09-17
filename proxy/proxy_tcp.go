@@ -1,8 +1,8 @@
 package proxy
 
 import (
+	"../config"
 	"../system"
-    "../config"
 	"./strategy"
 	//	"io"
 	"log"
@@ -25,9 +25,9 @@ type TcpProxy struct {
 // description
 // init TcpProxy
 func (proxy *TcpProxy) Init(config *config.Config) {
-    //proxy.setProxyData(&ProxyData{})
-    proxy.data = new(ProxyData)
-    proxy.data.Init(config)
+	//proxy.setProxyData(&ProxyData{})
+	proxy.data = new(ProxyData)
+	proxy.data.Init(config)
 	proxy.setStrategy(config.Strategy)
 }
 
@@ -41,7 +41,7 @@ func (proxy *TcpProxy) setStrategy(name string) {
 // description
 // set backend available
 func (proxy *TcpProxy) isBackendAvailable() bool {
-    return len(proxy.data.Backends) > 0
+	return len(proxy.data.Backends) > 0
 }
 
 // description
@@ -50,10 +50,10 @@ func (proxy *TcpProxy) Dispatch(con net.Conn) {
 	// need check backends availabe
 	log.Println("check availabe backends")
 	if proxy.isBackendAvailable() {
-        //servers := []string{"192.168.33.19:8000"}
-        //servers := []string{"127.0.0.1:21288"}
-        servers := proxy.data.BackendUrls()
-        log.Println("servers----> ", servers )
+		//servers := []string{"192.168.33.19:8000"}
+		//servers := []string{"127.0.0.1:21288"}
+		servers := proxy.data.BackendUrls()
+		log.Println("servers----> ", servers)
 		// set static ---> change dynamic
 		url := proxy.strategy.Choose(con.RemoteAddr().String(), servers)
 		proxy.transfer(con, url)
@@ -68,7 +68,7 @@ func (proxy *TcpProxy) Dispatch(con net.Conn) {
 // transfer ---> client---> proxy--->backends
 func (proxy *TcpProxy) transfer(local net.Conn, remote string) {
 	remoteConn, err := net.DialTimeout("tcp", remote, DefaultTimeoutTime*time.Second)
-    log.Println("remote --->" , remote)
+	log.Println("remote --->", remote)
 	if err != nil {
 		local.Close()
 		log.Println("connect to endpint error:  ", err)
@@ -88,10 +88,10 @@ func (proxy *TcpProxy) transfer(local net.Conn, remote string) {
 
 // description
 // safe Copy --->[]byte
-// method 1 ----> parse byte from conn ---| for more designer, I choose method 1 
+// method 1 ----> parse byte from conn ---| for more designer, I choose method 1
 // method 2 ----> just use io.Copy(from, to)
 func (proxy *TcpProxy) safeCopy(from net.Conn, to net.Conn, sync chan int) {
-    // method 1
+	// method 1
 	for {
 		buf := make([]byte, 512)
 		n, err := from.Read(buf)
@@ -109,7 +109,7 @@ func (proxy *TcpProxy) safeCopy(from net.Conn, to net.Conn, sync chan int) {
 		log.Println("write:--->")
 	}
 
-    // method 2 
+	// method 2
 	//   io.Copy(from, to)
 	// check --> byte
 
