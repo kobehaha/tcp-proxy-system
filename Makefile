@@ -7,9 +7,11 @@ ifeq "$(GOPATH)" ""
 	$(error Please set the enviroment variable GOPATH before running `make`)
 endif 
 
+PROJECT  := proxyd
 CUREDIR  := $(shell pwd)
 GO       := GO
-GOBUILD  := GOPATH=$(CUREDIR):$(GOPATH) CGO_ENABLED=0 $(GO) build
+CPU_COUNT := 2
+GOBUILD  := GOPATH=$(CUREDIR):$(GOPATH) CGO_ENABLED=0 $(GO) build -v -x -p $(CPU_COUNT) -o $(PROJECT)   
 
 ## other 
 ARCH     := "`uname -s`"
@@ -22,10 +24,16 @@ TARGET = ""
 build:
 	$(GOBUILD) 
 
+## exclude clean file exist
+.PHONY: cleanall cleanobj cleandiff clean
+
 clean:
 	$(GO) clean -i ./...
 	rm -rf *.out
 
+
+test:
+	@echo 'now --> there is not exist ' 
 
 
 
