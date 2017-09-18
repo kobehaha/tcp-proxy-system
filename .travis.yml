@@ -9,6 +9,7 @@ before_install:
     - touch /tmp/install.log
 script:
     - cd ./src/ 
+    - ls -l
     - make 
 
 notifications:
