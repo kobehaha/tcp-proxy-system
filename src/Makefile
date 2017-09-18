@@ -9,7 +9,7 @@ endif
 
 
 
-PREFIX=/Users/kobe/Documents/go/proxy
+PREFIX=$(shell pwd)/../  
 BINDIR=${PREFEX}/bin
 PROJECT  := proxyd 
 CUREDIR  := $(shell pwd)
