@@ -13,7 +13,7 @@ PREFIX=/Users/kobe/Documents/go/proxy
 BINDIR=${PREFEX}/bin
 PROJECT  := proxyd 
 CUREDIR  := $(shell pwd)
-GO       := GO
+GO       := go 
 CPU_COUNT := 2
 GOBUILD  := GOPATH=$(CUREDIR):$(GOPATH) CGO_ENABLED=0 $(GO) build -v -x -p $(CPU_COUNT) -o $(PROJECT)   
 
