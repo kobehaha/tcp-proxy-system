@@ -1,0 +1,15 @@
+language: go
+go:
+    - 1.8
+    - 1.7.3
+    - 1.6
+sudo: true 
+
+before_install:  
+    - touch /tmp/install.log
+script:
+    - cd src/ 
+    - make 
+
+notifications:
+  email: false
