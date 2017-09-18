@@ -8,7 +8,7 @@ sudo: true
 before_install:  
     - touch /tmp/install.log
 script:
-    - cd src/ 
+    - cd ./src/ 
     - make 
 
 notifications:
