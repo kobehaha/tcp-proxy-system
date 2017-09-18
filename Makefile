@@ -9,10 +9,10 @@ endif
 
 
 
-PREFIX=/Users/kobe/Documents/go/proxy
-BINDIR=${PREFEX}/bin
-PROJECT  := proxyd 
+PREFIX   := /usr/local/
 CUREDIR  := $(shell pwd)
+BINDIR   := ${CUREDIR}/bin
+PROJECT  := proxyd 
 GO       := go
 CPU_COUNT := 2
 GOMAIN   := src/main.go
@@ -28,6 +28,7 @@ TARGET = ""
 
 build:
 	$(GOBUILD) 
+	mv $(PROJECT) $(BINDIR) 
 
 ## exclude clean file exist
 .PHONY: cleanall cleanobj cleandiff clean
