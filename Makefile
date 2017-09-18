@@ -1,6 +1,6 @@
 ### Makefile for tcp-proxy
 
-GOPATH ?= $(shell go env GOPATH) 
+GOPATH ?= $(shell which go) 
 
 # Ensure Gopath is set before running build process
 ifeq "$(GOPATH)" ""
@@ -44,4 +44,3 @@ test:
 
 install: 
 	@echo 'now --> start to install ' 
-
