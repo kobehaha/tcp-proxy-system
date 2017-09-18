@@ -1,5 +1,4 @@
 package server
-
 import (
 	"../config"
 	"../proxy"
@@ -22,6 +21,7 @@ type ProxyServer struct {
 	port     uint16
 	beattime int
 	listener net.Listener
+    requestqueuesize int 
 	on       bool
 	proxy    *proxy.TcpProxy
 }
@@ -35,6 +35,7 @@ func (server *ProxyServer) Init(config *config.Config) {
 	server.host = config.Host
 	server.port = config.Port
 	server.beattime = config.Hearbeat
+    server.requestqueuesize = config.RequestQueueSize
 	server.setProxy(config)
 }
 
@@ -72,7 +73,8 @@ func (server *ProxyServer) Start() {
 		con, err := server.listener.Accept()
 		if err == nil {
 			log.Println("start -----> dispatch")
-			go server.proxy.Dispatch(con)
+            //compare channel manager count
+			go server.proxy.Dispatch(con, server.requestqueuesize)
 
 		} else {
 			log.Println("client connect server error:")

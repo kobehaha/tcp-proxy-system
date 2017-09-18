@@ -5,7 +5,6 @@ import (
 	//    "errors"
 	"../util"
 )
-
 //description
 // manager request channel
 // method1 ---> now
@@ -24,6 +23,13 @@ func (channelManager *ChannelManager) Init() {
 	channelManager.mapSrc = make(map[string]*Channel)
 	channelManager.mapDst = make(map[string]*Channel)
 	channelManager.mutex = new(sync.Mutex)
+}
+
+
+// description
+// get src length
+func (channelManager *ChannelManager) GetChannelsLen() int {
+    return len(channelManager.channels)
 }
 
 //description

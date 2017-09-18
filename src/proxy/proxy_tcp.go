@@ -46,7 +46,15 @@ func (proxy *TcpProxy) isBackendAvailable() bool {
 
 // description
 // dispatch
-func (proxy *TcpProxy) Dispatch(con net.Conn) {
+func (proxy *TcpProxy) Dispatch(con net.Conn, requestqueuesize int) {
+
+    // compare channalManager count
+    if proxy.data.getRequestSrcLen() >= requestqueuesize {
+        // need to add ---> requesting queue | channel notify
+        log.Println("new request need to wait for requestqueue")
+        con.Close()
+        return 
+    } 
 	// need check backends availabe
 	log.Println("check availabe backends")
 	if proxy.isBackendAvailable() {

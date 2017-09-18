@@ -13,7 +13,7 @@ import (
 // define default config
 const (
 	DefaultConfigFile = "../conf/default.json"
-	DefaultLogFile    = "proxy.log"
+	DefaultLogFile    = "../logs/proxy.log"
 )
 
 // descrition

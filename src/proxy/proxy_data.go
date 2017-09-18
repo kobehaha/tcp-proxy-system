@@ -40,6 +40,12 @@ func (proxyData *ProxyData) setBackends(backends []system.Backend) {
 }
 
 // description
+// return request lenth
+func (proxyData *ProxyData) getRequestSrcLen() int {
+    return proxyData.ChannelManager.GetChannelsLen()
+}
+
+// description
 // set backendUrl
 func (proxyData *ProxyData) BackendUrls() []string {
 	proxyData.mutex.RLock()
