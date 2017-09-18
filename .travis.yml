@@ -8,6 +8,7 @@ sudo: true
 before_install:  
     - touch /tmp/install.log
 script:
+    - which go
     - cd ./src/ 
     - ls -l
     - make 
