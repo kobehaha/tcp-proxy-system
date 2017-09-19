@@ -5,6 +5,7 @@ import (
 	"./log"
 	"./server"
 	"./util"
+	"fmt"
 	"path/filepath"
 	"runtime"
 )
@@ -12,20 +13,21 @@ import (
 // description
 // define default config
 const (
-	DefaultConfigFile = "../conf/default.json"
-	DefaultLogFile    = "../logs/proxy.log"
+	DefaultConfigFile      = "../conf/default.json"
+	DefaultLogFileLocation = "../logs"
+	DefaultLogName         = "proxy.log"
 )
 
 // descrition
 // main
 func main() {
 
-	// prepare to start proxy server
-	log.Init(DefaultLogFile)
 	//log.Println("prepare to start server")
 	path := util.DefaultPath()
 	// log.Println("homt path ---->" ,  path)
 	config, err := config.Load(filepath.Join(path, DefaultConfigFile))
+	init_log(config)
+
 	if err == nil {
 		runtime.GOMAXPROCS(config.MaxProcessor)
 		proxy := &server.ProxyServer{}
@@ -33,4 +35,16 @@ func main() {
 		proxy.WatchStopSignal()
 		proxy.Start()
 	}
+}
+
+func init_log(config *config.Config) {
+	// log
+	logfile := config.LogFile
+	fmt.Println("logfile = %s", logfile)
+	if logfile == "" {
+		log.Init(DefaultLogName, DefaultLogFileLocation)
+	} else {
+		log.Init(DefaultLogName, logfile)
+	}
+
 }

@@ -37,12 +37,14 @@ func (proxyData *ProxyData) setBackends(backends []system.Backend) {
 	for _, backend := range backends {
 		proxyData.Backends[backend.Url()] = backend
 	}
+	proxyData.Deads = make(map[string]system.Backend)
+
 }
 
 // description
 // return request lenth
 func (proxyData *ProxyData) getRequestSrcLen() int {
-    return proxyData.ChannelManager.GetChannelsLen()
+	return proxyData.ChannelManager.GetChannelsLen()
 }
 
 // description
@@ -56,4 +58,23 @@ func (proxyData *ProxyData) BackendUrls() []string {
 		keys = append(keys, k)
 	}
 	return keys
+}
+
+// description
+// set clean dead server
+func (proxyData *ProxyData) Clear(url string) {
+	proxyData.mutex.RLock()
+	defer proxyData.mutex.RUnlock()
+	proxyData.Deads[url] = proxyData.Backends[url]
+	delete(proxyData.Backends, url)
+
+}
+
+// description
+// set clean recover
+func (proxyData *ProxyData) Recover(url string) {
+	proxyData.mutex.RLock()
+	defer proxyData.mutex.RUnlock()
+	proxyData.Backends[url] = proxyData.Deads[url]
+	delete(proxyData.Deads, url)
 }

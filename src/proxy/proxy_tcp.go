@@ -48,13 +48,13 @@ func (proxy *TcpProxy) isBackendAvailable() bool {
 // dispatch
 func (proxy *TcpProxy) Dispatch(con net.Conn, requestqueuesize int) {
 
-    // compare channalManager count
-    if proxy.data.getRequestSrcLen() >= requestqueuesize {
-        // need to add ---> requesting queue | channel notify
-        log.Println("new request need to wait for requestqueue")
-        con.Close()
-        return 
-    } 
+	// compare channalManager count
+	if proxy.data.getRequestSrcLen() >= requestqueuesize {
+		// need to add ---> requesting queue | channel notify
+		log.Println("new request need to wait for requestqueue")
+		con.Close()
+		return
+	}
 	// need check backends availabe
 	log.Println("check availabe backends")
 	if proxy.isBackendAvailable() {
@@ -139,5 +139,26 @@ func (proxy *TcpProxy) closeChannel(channel *system.Channel, sync chan int) {
 		<-sync
 	}
 	proxy.data.ChannelManager.Delete(channel)
+
+}
+
+// description
+// check backends
+func (proxy *TcpProxy) Check() {
+	for _, backend := range proxy.data.Backends {
+		_, err := net.Dial("tcp", backend.Url())
+		if err != nil {
+			proxy.data.Clear(backend.Url())
+			log.Println("clean backendUrl which is not available -----> ", backend.Url())
+		}
+	}
+
+	for _, backend := range proxy.data.Deads {
+		_, err := net.Dial("tcp", backend.Url())
+		if err == nil {
+			proxy.data.Recover(backend.Url())
+			log.Println("recover backendUrl which is availabe ----->", backend.Url())
+		}
+	}
 
 }

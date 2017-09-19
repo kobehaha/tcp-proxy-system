@@ -1,4 +1,5 @@
 package server
+
 import (
 	"../config"
 	"../proxy"
@@ -8,6 +9,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 )
 
 const (
@@ -17,13 +19,13 @@ const (
 // description
 // define proxyServer
 type ProxyServer struct {
-	host     string
-	port     uint16
-	beattime int
-	listener net.Listener
-    requestqueuesize int 
-	on       bool
-	proxy    *proxy.TcpProxy
+	host             string
+	port             uint16
+	beattime         int
+	listener         net.Listener
+	requestqueuesize int
+	on               bool
+	proxy            *proxy.TcpProxy
 }
 
 // description
@@ -34,8 +36,8 @@ func (server *ProxyServer) Init(config *config.Config) {
 	//server.port = 1000
 	server.host = config.Host
 	server.port = config.Port
-	server.beattime = config.Hearbeat
-    server.requestqueuesize = config.RequestQueueSize
+	server.beattime = config.Heartbeat
+	server.requestqueuesize = config.RequestQueueSize
 	server.setProxy(config)
 }
 
@@ -63,6 +65,8 @@ func (server *ProxyServer) Address() string {
 func (server *ProxyServer) Start() {
 	log.Println("start server and server address is " + server.Address())
 	local, err := net.Listen("tcp", server.Address())
+	// start ----> heartbeat
+	server.heartbeatCheckBackends()
 	if err != nil {
 		log.Panic("server start error" + err.Error())
 	}
@@ -73,7 +77,7 @@ func (server *ProxyServer) Start() {
 		con, err := server.listener.Accept()
 		if err == nil {
 			log.Println("start -----> dispatch")
-            //compare channel manager count
+			//compare channel manager count
 			go server.proxy.Dispatch(con, server.requestqueuesize)
 
 		} else {
@@ -83,7 +87,7 @@ func (server *ProxyServer) Start() {
 	defer server.listener.Close()
 }
 
-// descrition
+// description
 // stop proxy server
 func (server *ProxyServer) Stop() {
 	server.listener.Close()
@@ -102,4 +106,19 @@ func (server *ProxyServer) WatchStopSignal() {
 		server.Stop()
 		log.Println("proxy recevie stop signal")
 	}()
+}
+
+// description
+// hearbeat to check backends server
+func (server *ProxyServer) heartbeatCheckBackends() {
+	timerChannel := time.NewTicker(time.Millisecond * time.Duration(server.beattime)).C
+	go func() {
+		for {
+			select {
+			case <-timerChannel:
+				server.proxy.Check()
+			}
+		}
+	}()
+
 }

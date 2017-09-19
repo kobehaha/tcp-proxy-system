@@ -1,17 +1,19 @@
 {
-    
+
     "service": "proxy for tcp protocal, just as mysql , http ... ",
     "ip": "127.0.0.1",
     "port": 1001,
     "keepalive": 20,
     "protocol": "tcp",
-    "requestqueuesize": 400,
-    "maxprocessor": 2, 
+    "requestqueuesize": 500,
+    "maxprocessor": 2,
+    "heartbeat": 5000,
     "strategy": "random",
+    "logfile": "/Users/kobe/Documents/go/proxy/logs",
     "backends": [
      {
         "host": "192.168.33.19",
-        "port": 8000 
+        "port": 8000
      }
     ]
 }

@@ -17,8 +17,9 @@ type Config struct {
 	Strategy         string           `json:"strategy"`
 	RequestQueueSize int              `json:"requestqueuesize"`
 	MaxProcessor     int              `json:"maxprocessor"`
-	Hearbeat         int              `json:"heartbeat"`
+	Heartbeat        int              `json:"heartbeat"`
 	Keepalive        int              `json:"keepalive"`
+	LogFile          string           `json:"logfile"`
 	Backends         []system.Backend `json:"backends"`
 }
 
