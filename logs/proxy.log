@@ -11231,3 +11231,536 @@ kí/ëävôW,u‹â1æÿ š–¤É„¼d'¾Ğhöñ'ê“î¿šÌ¨»•G«W‹xÉµ½;D’ïş@3Hj¹ÏaŠâ¬ô«İ^+;
 2017/09/19 23:39:37 server.go:96: proxy stop success
 2017/09/19 23:39:37 server.go:107: proxy recevie stop signal
 2017/09/19 23:39:37 server.go:84: client connect server error:
+2017/09/19 23:43:32 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/19 23:43:32 server.go:66: start server and server address is :1001
+2017/09/19 23:43:32 server.go:71: server start errorlisten tcp :1001: bind: permission denied
+2017/09/19 23:43:35 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/19 23:43:35 server.go:66: start server and server address is :1001
+2017/09/19 23:43:35 server.go:73: proxy server start ok
+2017/09/19 23:43:44 server.go:79: start -----> dispatch
+2017/09/19 23:43:44 proxy_tcp.go:59: check availabe backends
+2017/09/19 23:43:44 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/19 23:43:44 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/19 23:43:44 proxy_tcp.go:114: read: GET /login/ HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=igzogjx8zer7422s4qhuq7pi8ekkjxt3
+
+
+2017/09/19 23:43:44 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:44 proxy_tcp.go:114: read: HTTP/1.1 200 OK
+Content-Length: 1654
+Set-Cookie:  sessionid=igzogjx8zer7422s4qhuq7pi8ekkjxt3; expires=Tue, 19-Sep-2017 15:48:44 GMT; httponly; Max-Age=300; Path=/
+Vary: Cookie
+Server: TornadoServer/4.3
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ç™»å½• | å¤šè´äº‘ç®¡ç†åå°</title>
+    <link rel="shorÂ·1tcut icon" href="/static/img
+2017/09/19 23:43:44 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:44 proxy_tcp.go:114: read: /facio.ico" type="image/x-icon">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name"><img src="/static/img/duobei.png"></h1>
+     
+2017/09/19 23:43:44 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:44 proxy_tcp.go:114: read:        </div>
+            
+            <h2>æ¬¢è¿ç™»é™†å¤šè´äº‘ç®¡ç†åå°</h2>
+            <form class="m-t" role="form" method="post" action="">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required="length[6~50]">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                </
+2017/09/19 23:43:44 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:44 proxy_tcp.go:114: read: div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+                <a href="/juser/password/forget/"><small>Forgot password? </small></a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+2017/09/19 23:43:44 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:44 proxy_tcp.go:107: read error---------->: EOF
+2017/09/19 23:43:45 server.go:79: start -----> dispatch
+2017/09/19 23:43:45 proxy_tcp.go:59: check availabe backends
+2017/09/19 23:43:45 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/19 23:43:45 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/19 23:43:45 proxy_tcp.go:114: read: GET /static/img/facio.ico HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:1001/login/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=igzogjx8zer7422s4qhuq7pi8ekkjxt3
+
+
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: HTTP/1.1 200 OK
+Content-Length: 11350
+Accept-Ranges: bytes
+Server: TornadoServer/4.3
+Last-Modified: Sun, 03 Sep 2017 14:12:19 GMT
+Etag: "934cacfa3fc248a9abf6e668ff84ca82"
+Date: Tue, 19 Sep 2017 15:43:44 GMT
+Content-Type: image/vnd.microsoft.icon
+
+ÿØÿà JFIF      ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ ,," ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ÷ú(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: 
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+*7‘"Fy*’IÀÈêŸ4;’+v–útşuÊçıãÅI½ÊŠñİCâµ8e´¶µ³SĞ±20şB¹kïx‚ô>³vFsˆØF?ñĞ*Ò4TfÏ ®/ìíµÅÔ1(îîfIâÿ ÆÌ­­X†Q’<å?Ö¾qšF–C$ŒÒ9êîÅæjäG_Z‡[ÈÕa»³èÏøO<3¹‡öÅ¾W¯5j×Åzî<^Í§šü|Îe|õ¥Œ3øRU¼‡õo3êÈç†U¨àô*Àæ¥¯•`½x0Í$dtØåqùVíŸ‹uûM¾F±vôáÿ ô,Õ*©ğò[FÑ^Ä¯ÂÀµÜI`û.+¬Ñ>-XÎëo­[=”‡ş[§Ïú¢­I3)S’İ•EW´½¶¾·[‹IãWƒV*ˆ
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¬=oÅZO‡âÍíÒù§îÂŸ4ø
+ Ü¬sÄ:‡ìÍÅôÀÄq//!ô¼ëQø§¨Üù«ai¢å;ß¸ù×qw=İË\İO%ÅÃ}éelŸÃĞ{
+—$k-îlkş&Ô<EpÍvæ+N‘Ù£| z¿÷é
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: X& t˜ÏïP;ÖnGTb–ˆYªÈşô²IïUóY6ZjŒšFjŒµC(q4™¦n£4†;4ô”§sŠ‹4¹¢à^KŒ÷üJ%_¥fS·¸+U)±r6‰¯ßh^vpb‚ñõGúŠõİâ>©ù0]Ê,îß²· oñ¯Ÿw=ğGPE9¤gR­†SÔ¸Õ±”è)Z‚A¥¯œ¼1ñ\ğÆØYŸRÓÇü°™ÿ xƒı–?È×¸xgÅ:gŠ´áy¦Í»DÜ<mèEtFJ[s§(=MÚ(¢¨€¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(  œh¯5øã9,ó¡é“m¹uÿ J•zÄ‡ ûÇô¤İ†“nÈ«ãˆ“-äšn…2Ğšñy!¿º¾¦¼ŞIZIWfyd;Øå˜ú“Qd*…^tÒÃÖ±r¹Ù
+j(—u!z¬ó…÷¨àš›šXµ$‡ûà
+¯$¿í±ı*³HOzˆ½&ÆNÒÔLù¨‹Ôm&:ôõ¨c$.Ã¡ëL2ãï´Âş”…©›x#ŠMÕÆr8>¢“{/^G¨ëHeÔàjºÉ‡Š= %Í.j=Ô¡¨Ì7r8aĞÒ£n0GRMpsæ'Ş¨ 	…ZÓ5íRQÓ.ZŞí;» şëâ©#‡PÊx4ğER
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: m;¡I&¬Ï¢¼ã{?Z`-õ×÷¶äõÿ i}EuÕò¥äöWQ]ZÌğÏÜ’!ÁS^íà?Åâ[±Ş”‹Tˆr€àJ¿Ş_ê;WT*shÎ´¹5[ÅQZ…Q@Q@Q@Q@Q@VOˆõ˜|?áûİNsòÁ#İºùâ€9|AÃíı—¦„¸Õ¤\OÉn¿ŞoA^6ÒM#É5Äï<ò1y%~¬Æ¡I%•¤ººs%İËy“HİYôÕĞˆm·¥a9\ì¥O•_©+ÊdœUW¹İĞñTšfvÉ9¦ù•Í¬Y2Ô~nI•ş*7}¤?n‡éJàN^˜^˜ZšZÇ–¦¦–¦–¤ô<=)wSSs@É7Qº£Í&ê@I»œ´àşõ\·Îµ.êå¥”w§‰Ö©î ?=h—„‚$ªÍ<IE‚åŞTØşéìj`ÕI›ÌŒ®yíõ©!›Ì@İ­0.«6—sÙİCsm+E<,9ò¤U ÔğÔÓ°5}¤¼âø<W¤‡m±ßÃ…¸„‡±Æºªù‡Â!—Ãzı¾£ıĞ>]Â~3×ñE}1ñÜÛÇ<L92°äzWT%Ì>¬9%bj(¢¬Ì(¢Š (¢Š (¢Š (¢Š +Ä¾/x©5[›i’‰„·î
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: §…ÇD>¼óø
+ìş(øÁ¼'á†kgÛ}tLp‘Õ}[àÖQÉ¹–á‹ÜÌ|É¤n¬O­DådkJÌ}åÀÕz÷}ë.G,Ä“’{Ó¯dûCHÇİ#µVn;[‡G¯½s6w!û©SsIšº‚{fh&€¿ÊÀ?s±ôö¥-HO­E´¯Ü<z µ74Ã&>ò•£zŸâš3MÜ=¿:BÃ»Î€š3LÜN~”ŒHí *œ³İ;4Ğ6€=)h¹¤<ı{QE~px4ğÕ½ˆèhVÎAá‡Z ˜5,o¶V^Çæ4ŒpèŞø ªõ(j¨­R+P´|z÷Ÿ„šòêm.F}Ú LgîŸæ?
+ğ5¯áÿ ^xgVƒU´$˜&‹<Kñê+Jr³2­hè}[EUÓï¡ÔôëkëvİÄk"Üšµ]G QE QE QE QE!8Ôó‡Å]Mõ¿ˆÉg•k[Ç£®å\ÍÌä’J—Qœ^øÇÄÁ™Ñ®İˆêÕ9®j¯S¶„m•›­FèA¥Ji•‘¹|²p{ÆJ@ ‚2cQldû‡+ıÖş” óE7Ì\€ÙSïş4ğ3Ò€Šn*B´›iÒ€õQùTÛi6Ğ>ZtQ±GE•
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: JVšÇ²}0Ä(É¦ªœîn¿ÊîÜİ{ÂŠ bŸj1í@Å§âŒ{PqHÉœÔt§í¥Å F§p÷­$ƒäĞŠ{)}õétdM (ÍH¤Ó@éNQH	…I\Áâ¢dy=ªEëLvø+ª½Ï„åÒæ}ÒiÓ_úæß2ÿ 2?
+ôÚùãàçˆOñÄúl­¶=F“Ğº?L×ĞõÙtyÕ¤ĞQEDQ@W‹üiñOˆ4_JƒL½–ÎÚHËFÎà}?­ {98×•Ü|fÓÄ’é" /	»wãx=3Rü7ø¡‰`f²É¨¿*¸ág£ĞûW…ø·IşÉñ®±¥6HvtÏtnGó K”¾Ÿ+“–39'×šÕK	…¼fÅ†%‘¿½š²Æ¹*|G¡I§a0Ó©*¤ÆiÀS‚Ò»A#"›ötÎ@*Ù8©ÂÓ‚Ğo%»Hÿ 4¾L¿ó×ÿ h%;eŸ“'üõÿ Çi¾K÷•¿,Uí”ÓKÈ«1úšpŒ‚­ytytP¥&ßj·å{R¨WmjÁÚ›³Ú€!ÛFÚ›e&Ê ‡m(Z—m.Ú ‹m©vÒì ¶Ó€§ìö§ dqv	î¼UŒíR}G0*« ê§ô¨ŞãtE
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: vOª³dì&›u%Šô+¸Ø«%ÊòûC5õ4ş*òk¡o¥A"Ã%À“ä€p1‚ }kæïøJOxªÒÃt‰k ón%A÷Fzg±5ïÚÕ¬‘éŞÓ£G)ÌşYÂ‡$Ÿv<WT^‰5~6w †PGCÍ-s®±y$ŸÙ>ŒIu÷$¹qû«aêOvô›á÷Ô,|yw¤¾«>¡l¶	,¾v3¥±Û¦FN*®dw4QE0
+ãş!ø2/xqí	{2ÚÉèøè}vÆuE,Ä*¨É'µ |VğŞiZŒ¶ó¤–×ÖÎU×£)Å?XÖõvöÖúåD· ˆÍŒtİê}ë²ø©«Zø‹Æ×2[¼›P!xqûÃI=ù8ü+ÏL“XI²X÷Bz0 “/ŸpRDåO¡©!½Œ0á—¡úÒE šÈr¦¡Õ=±KJ€neÉÍDâ¤iN£ƒ4×•Ú—B¹…¨©BW=4/µ<-8®éR¤1)á)Ê>b½ñš% Fœ¦T§„ <º<ª´#§ˆ½¨—•@5{É¨#îşÁÿ  ­åûSL~ÕxÅM1P0ÅíWÌTß+Ú€(yF$ã­^1TRÂÜ:}ñÛûÃÒ˜üš@U”Ğ2ô4¦<Ò§•íMÙ·éVöc
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: µ#G‘@‚Òí©Bb—e S¹_Ü¨ª;ešT·¶¥¹íDE,sëZ—Kûƒõ¯oø;¥éÉàkMF;H¾Ù3Èd”'qJÚšº1­.U¡cÀz§ƒ¼6–ñCr÷÷ Ks3BÀ»zLt¬:óWûV«ª_¬–V×7e›“É_”"Œü¸'¯½zF§ª[i62^]¹XÓĞe˜úÜ×ij^1Öd´Òt˜í´ÂÙºUÃ1ë‚{tQ94Õ¥á©©Â\ÑÓ»èuzïˆ¬<)§[ÚYÄ&½Ÿ	gi,ìzíÜ“Z>Ğ“÷7-æj7¯æİIêØáG°íX:4ñ—ˆ2×W0^M1È‰Há‡÷@ ¡®ídEt`ÊÃ ƒÁ®ˆìyòßAôQEQ!\×­ï®¼«Ã§Fİ¶lê}@úŠéhë@$ÄÎZ7‹*èİsß"¡¹¾K¨6 ç¡¯]øÏà?ìı`øŠÆĞµØÅĞEÿ U ş.;ò6¶.AíÍ &Ó„r÷IãëS_ m_#µGbLQ4oØäQ7™:˜ĞváTw4 64üËgz…lGŠ‡IBmÀ=”Z?A\RÜõ#±[fA´éî§U•ª¶Ú|¾IšD†öiÈıàô#¯Ò¦åXÃ‘Xmu+V#ÄˆzŠ˜¤ 
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ±¿ºüU„rZ96ç’â€©R¬^ÔÏ0B@’Dbz(êkNŞÜ•äsÑ@ Zè··QÊñ@HŠ?5³ÁÛê=jGJÕO8r%|»xnŞŸJA  áµ!¶
+GqZHô¦½°nAÚŞ¢€1ã„‚bo¼=Å[´Òöd…%‰ÃmqÈçëRO|„¨Y“•?ÂŞÕ*¢MuİÁ £	‚0GS5ªÖâ£h(,ÅM1V™ƒ=©¦ßÚ€1^/³ÎÊá½úÕ*¯½¨teaEEj6È©0Üb`\yıTLÄ¨Ìxí]w‰íôÇÔ`›J1ˆ'ŒEèÓ‘Ú°f¶)#!Á*HÈ<W4ÇI²­4x84Â”ÀÌÔ¾K#¨Ê¾ğº[øDHÕ@6ˆÇ$dšùÓUŒµ™QÔ‚£ñôw‚|£)ûÑÚ¢0ô `Öôş—º!ñT"y´ğá‚ÆåÔ…±Œçt«Ë¿iW$Û*9g`ù2’xÀ®óQ´KÛaqÕr§û¬:XVšCMn¯vàl>:ÜóÚ±©Ïx4+CÙrOdck~)Ó´M÷Y¾K››ÈV¬ÕRHáT~<šèşÁ}oàM&=CwÚ|Ìª‚Iğ®_IĞì|Gãïmì£&”IŠMœ\Ü¬=Uz€
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: àW]$Ô}ã‚¼£)û»QZ…Q@/ŞÑ,¦7íÚí"C.6ãß5òŒ4›ko]®…o<ºc¶è
+!aî;g§µ}?â­õİ[HİRee–=Ã*YN@aèq\Æ‘|º›Ìpy‰VhX{Q`<+Iğ‰5R¦=5íâ?òÖë÷cN¦½Dğe‡†šFKÍQQ³1_’,Š=}Ívº•úéÖoq g#€‹É$Ö5¿™¨FH‚t2õÇZ¤ŠHòM"=ĞHÀ`8üÍ_òıªkm9´ó=›®)Xê3Á©¼®FFkÏ©ñ3Ò‡ÂŠE ã¥ohş—RÒ âøÁùr ‚{µe\Ç¹bm.vªpOìZ–LVÖØıÜ¡ÏĞVzŞÈÑY&å±‹kğsA‘ÉæÜ´¥Ao5÷õ¥O…lO”¶½qæq^•´cúW? k–÷ŞYË07:|£©+Ÿ•¸õĞé¦qF´Õìy¿ˆ¼.#j–¶«%–>uO™á÷÷_åYpáÑYX2„w¯t[¨&Ns±¸Ã¡üë†×¼ûÖ½Ğ™#Üröçî1öôü*%lkN­İ¤qÉAsqö[˜U€òØ|ÇÒ®H%³”Å}o%¬€ãç)ú7Jmİ—Û`]…w/*zƒíQ_SqÁ†<‚:6Vtv
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: §m 0«cfÊŸğ­™á¸·eŞO˜PÕ€kD Ü¦lŞŞfš%ßˆ¾â´RX¤ÆÒOèG†HGYc®M±#8ëëL1TÒ]Ú %¦rHÓ!¼³¸8Šæ6oî–Áü Db¤ò}ªÿ ”GQHc
+2x†Rò}ªÜ	åGÊ§kà	ÿ 
+Ö/êà{Õ;Ò$ºµ²F¥mÒ yõ ZÖ£hğ*å¤¤&‡ÍÚ­Ù—±¨ïcÙ
+ûºŠ Î–.õJÕ’.MRxğh™}1'y‹üëÛ´»©4ÑÄrìQ,mÊ6¿
+ò³7÷vöHpòÈ? 9&½>f‡Ë’%rª Ü;ÅuĞW‹¹ÇˆİOü$4>uŒÛûygzšã<Câ¯µën—?›—3–¿eVB¨:)>„õö®$I>ã†ö«ê—‚ÃMéàûG–8Ü{gÚ´öj÷0æÑ«œöRXBÚsBÖ›@ŒÃ‚˜öÅ\¬	hòhºpLÊg•šyB*³•_aÒ·ªŒÂŠ( Š( 
+÷®c±—¨ˆü«ÎtXşÙ ØLóL7E’¶†äó^˜ÊJ‘FyÖ•é×:†‹!É²—0“Şå.GáM"µ†Ü‘ßŞ<ŸÖ¦äM<tÁüéêßw uïLg•ëQ‘
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ¯ÊFRqô5SË5©â!ö{á<ƒed`j°Uu¤=®,B´ÏF‹¼™l.uëfÎ7™[²óÍ{mœrZi«±7Jÿ 6Ÿ_jòÏY‰¼VÛÓøšOŒÿ n´ØÛÃš,…'tÍÜèyº=M(İÜŒDšIñOÅ;B»»²S&­|¹R‘¶È#>„õ5ä¯ñ/Ä1j·:£Ac5ÇŞ&ÕÇ¦qª%w nÜÜ’zÔ¿fïœšé´br§9ìv¿üajÛÎ±4„œáö‘ùbºïü{¾‚xãÖ¬’X³óMoò9÷#¡ı+È…¼dôıjQ§àŒò9Úhæ‹Ü^ÎKcì'ZĞ¼[§ı¢ÊX.â oB>eú¢¨\øMfvµİUøW…ø×WÓ ƒÄZFöX¬‚?nªËÜWÑ:µ¿¤Å}
+”İòÉê:ƒYI&ìÍÒ8óEİğ‚)l™äŞi©bğ=¬lI&ÜrKå¿uÔTû(‡·™”º¢Æ-Àã b¡@O¸ÿ j1šÛ¢Ÿ³a*õSxn0¸¦ÁXúÿ ‚ôÛË2ní¡¸ÆBíp}A×i\ï‹õõĞ´Å(7]LJÂ¸ÉqIÓŠW4§V¬æ£¹ã>)Ò®<\Xø‘Õ:­…Ø9ößZágø‹­IÆë~½£Åt
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: >$ğ¶¥ymy¯j×f…~c%Á&IXôUçÔçsäĞVŠµäEW%73¢—Çúä…rÇá
+?Z«eâ›ØµÆÔîãûK²”a¸Ät¬_!­'’ÃıY?J´¡µŒŸµŞç²h^)°Ö¤X"‘’|ª›†üzÒÔ“m©`UÔóõ¯Ši ¸I#vT9Võ_—]Ğn-îÔ}º(òÿ –€wúÖ)rêš5œô–æü‘sY—…bíÑFkYåU´YÏM€şuÏk2~ñaï7ô¬’»7e¿’úûİIÑS@x¯aØ¨ª©÷ Oµyo‚ô÷¹ó6)İ#€O¢¦½L)*A!@é]ğV‚8+üEym¡”åã¿¼85CTO±è—ó¤²¶Ø…vÜ>µ®c Ö^µ^›-‰/æ!ëˆ—æÌ~5F7;»ól-äÎwF§>¼Uš8Ö(ÕaT IH¢Š( ¢Š( ®T¶H||óæçO?Ü~Ãñ®â¸ÿ ¡³Ô´}\–9´¸şìœÿ }@0XäƒHWlÔ‚BÁN ”ª(ãüo§	4inâ\Ê¸Ü;tükÏ¬nÌ[X|Ñ?Ş_Jö=VÛíeÄArJg¸¯º€X]¼'„,J}cV7W:ğÓèväóüG­LX¡
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ‘6·°\×3 x|xÄz¿«!’ÏíHt“ñôº_…0,òø¦Õ\,Ä©QÜn^µØÙøN{]!,(ˆDU˜är~µã¨ªÔ²}öüÏ˜¯w_jW—»TyÓ1P£ .x }*…ÌF020Mn›gŠæ{dWvŠWLç‚Efê°º8Œ§æ£šò*1´P¾Òd×|Q§i‘¡c<ê­œ.~cùfºÛß	Ûé©®½Æ£7zuÙŠ+7<¨OÊÃÛwà·‰4ıÅqØŞXCæŞŸ*+Îw£v_¡ö«Ÿ|Ciâ/Íkcc6mä5Ğ<¬:÷A­$—-Ìâß=‹¿÷Ükº®”d)Æ·}88¯o¶Òmtû©æ¶COƒ"ƒò±ñë^IğE¬#ÖõKY ?ÚŠ„¹Êˆúmúæ½®_¼)­`®g-&Ò#¢Š*@(¢Š +2ó@¶¿¼kÇ$Ü„	7"1ì=ëN¤ˆòiÇq6ÒĞùïã#\E¬éz;º´1©¸/vè3^os-;¯OJôß#ş+˜ S“f¿ÌkÍ¯ ˜Z3¤Uõ*@¨¨ï#z*Ğ0[8é]Õ—€®®m|6H­VŠGÏÂ§#ó5Êh×66ZÅ½Æ§bolÑÁ’ ûw­}	ñÄ¾—Àšj$¼[äePïdtÆqÂ­%k²\Ÿ2
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: Hğ™4èt¿Aö‘Ê[İ¦Ç)"ç»ı_Ááëõ¼ÒäcbìrÑçøO¨÷®_E´Ó_\°‡_IWM–@gSŸ»øgô¶­£éë¡MÀ62ğ8©Ş›¹q—%eæxŒ—dhëJ¬QÁí¶±®.Ó´ë­Ó>•µâ¤ò<Sy«$E×¬-:2ëksó ~™¨‚ºLê›³=›ÃZé~¶@¸’THqÉ'µm&å#iš¸hãÚ~@£ôÅ •Ø‘å7wqY™˜1àŠ§en—?µ‘6¶Ã»0>‚® ÌpZÂ1­oYÕX|¢E³‹ıÔŸÄ“ùPÄÎÆŠ(¤ ¢Š( ¢Š( ¬/éï©øZşŞ0LÂ?2,w¯Ì¿¨­ÚB†€8­éu-6Òô%‰\ıqÈüëH¸Î1ôƒ¢Cı¬jú!E¼ßhƒâ“'ô9º¬1·#¡¦1ÔŠóßhÑjÚü–P,p·ß¿Xšèõ_İÛİ<V¶Ğ¿”v‘)#?rúóÁã‹;ËÈE½½Ü?g.*túTURäv6¡eQslUø{u>‘ñ5,nFÉ.mÚŞe' ²üÊ}øÍ{ÌGå ×„kµ¯Ä]"ıTïßLèkÛdp7##ŒõÅaJ¯2¹Ñ‹ÃÊ7öñw„5m;âÚ
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ÙYM5­ü†xŒcÏŞöÁõªº‡ÃŸ_(‘ ´R	rqîq^û,ñË ŠW*ÙÂÉ·8ì+2H§³$´{Ğÿ ŒŠŠ›İ/‡–[Ÿ4Iáíc@Õ­ŒÖSCp’«BBä3‘‚+²Ò¾Ë35Ş­tÑI+Q˜Ï'Ö½jO&¾ùÈsƒíéUáÑ.®fù¤$ıçàâ¥I½qåÔ‡á÷„¬4KÛÍJÙ%V‘[¤lîÉ®íãš†Ş··Hc*}jZİh¬rIŞM…Q@‚Š( ŸÃÓ(¡;	9ñÓOh¯t]A
+Á­Ù‡cÕGó¯4’i¯m0ÙÜH­Õ‚?A_SßÙ[j–¾EÔK´ïA"äs²DÖ„Ç5²À=Q>_Ò³«£º:0îë•Ÿ/K¦„“+Æ}pZé4í3Sñ6VvÑ“”f!3ğ¨	'ñë^å©éÚV«oåÜÚA*‚Xşµfé¾O…4í)Ä	n¹Æ}MB•ô5q¶§9¢|7‚ãP²óîç¹’)VBØÂ(Sœcğ¯h¸Dš„Œ©5“¦ÛÇ¤Û²—\7-·œVŠJË™6ïş-½+dì¬sNò•Ñóçn•|qqmİ/Ù£ˆÉÜIş•“s§ø’ÓO3æ¹ˆ9È­+7ûSâÎ«yp„-¼¦@­íÂÔï}{âûÍ
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: JÆÛÎ‚ÕÆHÈ9êM	^j+dvb"á½ÙéöpÉŒ1Kş±W§Æ=+“·ñF©tQ¬(Ìqå $šë7ƒpÃÓÒ»æ4W½½NÓ®oY€X#g$úÅix2Åì<+d“)Ê|Ùï˜ş¦¹meQÔt½	pEäâI‡¤IóÌàW¤  :)11h¢ŠB
+(¢€
+(¢€
+(¢€8ÿ B–>#ÒµRB$»¬çn€îå3øƒùÕÜ`üÊ~•©«i–úÎ™=Òæ9WTö#Ük™Ñï'óeÒ5,JÌı„Ñÿ ‹ı}0ûE·½›ÎfhÜõ+k“ñfeuØñ•œ•nÄWk¨^%„Gç<*ç–5ÈİM-ÅÃË.71Î1ÓÚ©j\N#N»Õ ñ†ôí^/5"¹ÛÀòÃµ{Ä¬KW‹ø¶6KmRLúeÂ\€:•æçÒ½ÚæFÆÛvñ¬ˆÃ¸#5ËVšÂtÆ¬¥e'{lUšI‘ğŠ¾Òi‚[±—†?­ZxœßLñQı’.?v:dšç³:T£ağ;•Ë®®Fç¥UH•>âí©ã5HÊveµ9§ÓSëTs0¢Š¯=Ä‘>Ô¶’\¼¸À¦	7¢&,(9¬ñ9d/+yıÂ¹Å6ÓR–vaö)Ê/f0ày©¹~ÎVº4
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: è r(ª3
+­päŒv«¥W•7TËbákêeÏ{I#7¸µÄ`„Œ(ôUşµ~HŒ2îõ	´‹$ù`îk+qšµ™M¼P=NÒ*è;Æ@–ê„`°ÇlñR³ÇoÍ+5.Ì{Í8¦DÜwGŠk¨7ÄiºV"Äó±û‹qõ®‹BQáØãÏ;ı`?òÓÔŸzÄğîíBãVñ‹‡ÔîÙâ'¯”¤…®ËMÒâ¿µ‘¥Ü
+¸ÁSÕÛN‚9§RSÖnçF’Ç$k,J0Ã ãšŒ’Ä‚)ê©jˆ»B€ ¬½Rò22Ãª^dD:ˆ“ø¤oaúšf¿[¥÷‰õ=W‡Ku[8[9ÚG/Ç•v•Ÿ£iPhºTãäŒrİÙ%¹95¡HAEPEPEPEPX~ Ğ¦‘İZJ-õ;l›yÀüÕ‡u=ÅnQ@\5û›™ä´Ô,"ŠöØüğHÊ¼§ºš¤ÌÄ’Çq'$×gã/I®ÛÁu`É§hÛ¢sÇ˜½ã'Ğ×Şd²ÛËAwÄ¶î0È¨÷qhÒ-–4š7Ir:•e=Á57µ¶Ğ.Âú¤˜µ,³.›£)çÊcØÕpi“YC{	·¹ŒIv=bcJqæE¢c9¤Ù^{¥ëZç†¿up²kHû¥y
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ¹·û8ıkµÑ¼A¤ø‚#&›x’•áâ?,ˆ}
+EsJ›E*Ë¡*DJ—e8T¤70´QTfQE FÑî9§ªí´RÂŠ(¦ ¦2Óè iØ€¦i¦:±ŠÍÖ5Í/A¶óõ;ÈàSÂ©9g>G$ı)rÜ®{DuÀxß[}MßÂš<™’^5•ä[ÅİsıãÒŸ¨ëºß‰?s¦Ç&‘¥·Ş¹˜bâaè«üÜóL²Óm´è>ÍkÁÌIË9şñ=Ík
+}Ym• ²†ÖÖhl0 D€qZZmïØ]’Lù/ÉÚ9£h°j¡uqä´q$O=Ì§ÛÇËÈ ÷<Vä³ZïÄ»&†ÒÊÂ[›ÉÎØbr}[ÑGs]O‡´¥¬—w'Õ.pg˜¢/¢Š¡àßË£G=î¢RMNí·;D)Ú5>‚ºÚ†C
+(¢‚Š( Š( Š( Š( Š( °|Cá{-~ îÑÜİGÃ¡ş£ØÖõãóCy¦Ş}‡Wa¹'J¿ê®ªÇıš¹oóÎ½UÒ,µ«³¿e…ûÈ=ˆ=½yF¥o®|?VmI%Ö4`~[Ø‡ï`;zw5S¾æğQØ‘ŠÎ¿Ğ¬µ	EÃ#Áx¿rêÙÌrÄuüjí­Ü7¶qŞ[Ê’A*îG^„S’c'ÏŒ'aëïL
+j
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ~4Ñ1ä\Ûë–£şYİ*`=7ãZ6ÿ ´È[Ë×tÛı"N…¥Œ¼÷ÒĞ\”ã8¨$Hîa{y@x¤0È Ô¸&+v:Í?ÅÕ5–³e.N €#Zë"IÊ:0ö`kÂ´ËmTğ¥dl-SSÓ#–&;0ãÚş§ŒW!áFDÑ®§´–é5;`6„•¶=\óÇ¦+™Ê×ÓcUNí+î}MÒŠñ¿êŞ4¾Ò£¾‡X…ã‘ˆòæ]Äc×Šël5/¡/¨jH{G Î³öÑ:^
+kí/ëävôW,u‹â1æÿ š–¤É„¼d'¾Ğhöñ'ê“î¿šÌ¨»•G«W‹xÉµ½;D’ïş@3Hj¹ÏaŠâ¬ô«İ^+;}OWÔo$[=É9Lÿ wÖ´ŒâÕÌªÑpšŠw>‰¿ñ>ƒ¥£5î¯eŞ¡¦ü«š¸ø¥¥Hvh–†¯'@`„ªßMÅyçØtKˆzv‰ee]6&–æM¹óÖ½JÃHÂ¤c¢¨Àµ‚RW1”Zv3%Õüi­œ3Ûh6ü1~ú|zdğ(°Ğ,l®>Ôâ[ËÓÖêíÌ’~ôü*ù“ºÒÅ.âQ¾ğïê+T—@pi\•¾fÍ7ËËd}k#Ä^(²ğÌVÏv®ípû#Š1–oR)4¿ë¾6™.õ±.“¡c
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: °ÊÍ8õr:jw!èYM©Şc¼»¶WÎb·÷sëì:×g xbÓDV›&æşQûë©9fö‹ì*ö•£éú’ÙéÖ±ÛÀ§;Pu>¤÷5¡I±7p¢Š†yã·MÒ6Ó­!QTdÕm#ˆJÒ6ÒHá	Çş•hJ„n¸ÆzĞ”T^|{öîíœö§<©fF?(ç4 ú*”•½ÄÂ(Ë–#w(qß¿áWh ¢Š( ¢Š( ¢Š( ¢Š( ¨¦Š9áx¦ExÜeaAõ©h 2¶Ñ×B×¦ĞŠ˜ìdİ=6Ÿ¼ŸPOåO¹·’İÊ°ùOBt>9‚6Òmnñûû[È^&‰`á‚j9@Şà€Fz”îi`Fvœ5€ ş®j6ÑÀãdôÏE‰&™W<›â3ø{ÄğëZ|†?íš)—)8Áê1\–„D¤Bå‚Á/Êù'òë^·ñL¶¾ğ=ÍÌÊŞm™ó" ã9¯'Ñ-c¾KÃ1lÄÉ´ã.k9¥¨®Ó=cÀqİi÷:†™:ºÄBÏ a™yÇ½v[$_¹&G£Šò­6ö[k}ø2êèFI±P^x¯[pãÒ¼ê±³¹êaêóÇĞg8÷úÔ{flæ@£¶ÑÍKHçlnÃª©"²:.p;2__ÃdÒ°µ¶O1•zÉ)áGÓÆjú
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:114: read: ¼z]ëÉhC^Ãµ‰#„'ƒ]<2kZëiWÛd·¸?hrrô‡ojómS&âérpnv~ à
+ï¥,xõgÍ7#Óşil4Ûívç-q{)Ufä•$ş&½€ËèEdøb³ğ¶›# Ï©æµÁÊık©v3ØŒã×¥I<¤€¨¥˜úÔÔeA8«—ºmµÓéZtªÆÚæç(bP°Ù(µ‡)hğÕ¾¥||Q©Û™'~,c”gÈˆt v'®}ë½¦¢ª(U ( v§R1
+(¢€
+£¨Ú½Ô*# :œ€zĞÕê(´9ä·\Ì‹6òÄºï r01·Ö–}"à,‡ÎYcØq—ó1 u;€íí[ÔP;“wuní3vg$Fã3µ½½jù·¸†ÃìPBÈÂ«—ÀÎ?ZtP§]Û^¬“E@nY	<ãØzVåPÿÙ
+2017/09/19 23:43:45 proxy_tcp.go:117: write:--->
+2017/09/19 23:43:45 proxy_tcp.go:107: read error---------->: EOF
+2017/09/19 23:43:49 server.go:96: proxy stop success
+2017/09/19 23:43:49 server.go:107: proxy recevie stop signal
+2017/09/19 23:43:49 server.go:84: client connect server error:
+2017/09/20 09:25:43 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 09:25:43 server.go:66: start server and server address is :1001
+2017/09/20 09:25:43 server.go:71: server start errorlisten tcp :1001: bind: permission denied
+2017/09/20 09:25:50 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 09:25:50 server.go:66: start server and server address is :1001
+2017/09/20 09:25:50 server.go:73: proxy server start ok
+2017/09/20 09:26:00 server.go:96: proxy stop success
+2017/09/20 09:26:00 server.go:107: proxy recevie stop signal
+2017/09/20 09:26:00 server.go:84: client connect server error:
+2017/09/20 09:27:03 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 09:27:03 server.go:66: start server and server address is :1001
+2017/09/20 09:27:03 server.go:73: proxy server start ok
+2017/09/20 09:28:44 server.go:96: proxy stop success
+2017/09/20 09:28:44 server.go:107: proxy recevie stop signal
+2017/09/20 09:28:44 server.go:84: client connect server error:
+2017/09/20 23:21:55 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 23:23:05 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 23:23:09 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 23:26:32 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 23:33:25 log.go:21: success create log file: /Users/kobe/Documents/go/proxy/logs/proxy.log
+2017/09/20 23:33:25 server.go:66: start server and server address is :1001
+2017/09/20 23:33:25 server.go:73: proxy server start ok
+2017/09/20 23:33:30 proxy_tcp.go:152: clean backendUrl which is not available ----->  192.168.33.19:8000
+2017/09/20 23:33:40 proxy_tcp.go:160: recover backendUrl which is availabe -----> 192.168.33.19:8000
+2017/09/20 23:33:47 server.go:79: start -----> dispatch
+2017/09/20 23:33:47 proxy_tcp.go:59: check availabe backends
+2017/09/20 23:33:47 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/20 23:33:47 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/20 23:33:47 proxy_tcp.go:114: read: GET / HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+
+
+2017/09/20 23:33:47 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: HTTP/1.1 302 FOUND
+Content-Length: 0
+Set-Cookie:  sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt; expires=Wed, 04-Oct-2017 15:33:48 GMT; httponly; Max-Age=1209600; Path=/
+Vary: Cookie
+Server: TornadoServer/4.3
+Location: http://127.0.0.1:1001/login/
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=utf-8
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:33:48 server.go:79: start -----> dispatch
+2017/09/20 23:33:48 proxy_tcp.go:59: check availabe backends
+2017/09/20 23:33:48 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/20 23:33:48 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/20 23:33:48 proxy_tcp.go:114: read: GET /login/ HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: HTTP/1.1 200 OK
+Content-Length: 1654
+Set-Cookie:  sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt; expires=Wed, 20-Sep-2017 15:38:48 GMT; httponly; Max-Age=300; Path=/
+Vary: Cookie
+Server: TornadoServer/4.3
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ç™»å½• | å¤šè´äº‘ç®¡ç†åå°</title>
+    <link rel="shorÂ·1tcut icon" href="/static/img
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: /facio.ico" type="image/x-icon">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name"><img src="/static/img/duobei.png"></h1>
+     
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read:        </div>
+            
+            <h2>æ¬¢è¿ç™»é™†å¤šè´äº‘ç®¡ç†åå°</h2>
+            <form class="m-t" role="form" method="post" action="">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required="length[6~50]">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                </
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+                <a href="/juser/password/forget/"><small>Forgot password? </small></a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:33:48 server.go:79: start -----> dispatch
+2017/09/20 23:33:48 proxy_tcp.go:59: check availabe backends
+2017/09/20 23:33:48 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/20 23:33:48 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/20 23:33:48 proxy_tcp.go:114: read: GET /static/js/jquery-2.1.1.js HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: */*
+Referer: http://127.0.0.1:1001/login/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt
+If-None-Match: "6631a779321bc03f4a5281d3ff526254"
+If-Modified-Since: Sun, 03 Sep 2017 14:12:21 
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: GMT
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: HTTP/1.1 304 Not Modified
+Accept-Ranges: bytes
+Server: TornadoServer/4.3
+Etag: "6631a779321bc03f4a5281d3ff526254"
+Date: Wed, 20 Sep 2017 15:33:48 GMT
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:33:48 server.go:79: start -----> dispatch
+2017/09/20 23:33:48 proxy_tcp.go:59: check availabe backends
+2017/09/20 23:33:48 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/20 23:33:48 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/20 23:33:48 proxy_tcp.go:114: read: GET /static/js/bootstrap.min.js HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Accept: */*
+Referer: http://127.0.0.1:1001/login/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt
+If-None-Match: "281cd50dd9f58c5550620fc148a7bc39"
+If-Modified-Since: Sun, 03 Sep 2017 14:12:19
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read:  GMT
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:114: read: HTTP/1.1 304 Not Modified
+Accept-Ranges: bytes
+Server: TornadoServer/4.3
+Etag: "281cd50dd9f58c5550620fc148a7bc39"
+Date: Wed, 20 Sep 2017 15:33:48 GMT
+
+
+2017/09/20 23:33:48 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:48 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:33:58 server.go:79: start -----> dispatch
+2017/09/20 23:33:58 proxy_tcp.go:59: check availabe backends
+2017/09/20 23:33:58 proxy_tcp.go:64: servers---->  [192.168.33.19:8000]
+2017/09/20 23:33:58 proxy_tcp.go:79: remote ---> 192.168.33.19:8000
+2017/09/20 23:33:58 proxy_tcp.go:114: read: POST /login/ HTTP/1.1
+Host: 127.0.0.1:1001
+Connection: keep-alive
+Content-Length: 36
+Cache-Control: max-age=0
+Origin: http://127.0.0.1:1001
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://127.0.0.1:1001/login/
+Accept-Encoding: g
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:114: read: zip, deflate, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+Cookie: sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt
+
+username=zhangzhiyuan5&password=asdf
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:114: read: HTTP/1.1 200 OK
+Content-Length: 1758
+Set-Cookie:  sessionid=tah2xk7qlquwn39ih9rw1a2c5rz6swlt; expires=Wed, 20-Sep-2017 15:38:58 GMT; httponly; Max-Age=300; Path=/
+Vary: Cookie
+Server: TornadoServer/4.3
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ç™»å½• | å¤šè´äº‘ç®¡ç†åå°</title>
+    <link rel="shorÂ·1tcut icon" href="/static/img
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:114: read: /facio.ico" type="image/x-icon">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name"><img src="/static/img/duobei.png"></h1>
+     
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:114: read:        </div>
+            
+                <div class="alert alert-danger text-center">ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</div>
+            
+            <h2>æ¬¢è¿ç™»é™†å¤šè´äº‘ç®¡ç†åå°</h2>
+            <form class="m-t" role="form" method="post" action="">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required="length[6~50]">
+                </div>
+                <div class="form-group">
+                    <input typ
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:114: read: e="password" name="password" class="form-control" placeholder="Password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+                <a href="/juser/password/forget/"><small>Forgot password? </small></a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+2017/09/20 23:33:58 proxy_tcp.go:117: write:--->
+2017/09/20 23:33:58 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:03 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:03 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:03 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:03 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:03 proxy_tcp.go:107: read error---------->: EOF
+2017/09/20 23:34:05 proxy_tcp.go:152: clean backendUrl which is not available ----->  192.168.33.19:8000
+2017/09/20 23:34:06 server.go:96: proxy stop success
+2017/09/20 23:34:06 server.go:107: proxy recevie stop signal
+2017/09/20 23:34:06 server.go:84: client connect server error:

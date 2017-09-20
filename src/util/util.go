@@ -5,6 +5,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"strconv"
+    "strings"
 )
 
 // description
@@ -42,4 +43,22 @@ func DefaultPath() string {
 		log.Println("current path error:", err)
 	}
 	return absolutePath
+}
+
+// description
+// url get to Host
+func UrlToHost(url string) string {
+	return strings.Split(url, ":")[0]
+}
+// description
+// ipv4---> int
+func IP4ToInt(ip string) int {
+	nums := strings.Split(ip, ".")
+	sum := 0
+	for i := 0; i < len(nums); i++ {
+		n, _ := strconv.Atoi(nums[i])
+		sum += n
+		sum <<= 8
+	}
+	return sum >> 8
 }

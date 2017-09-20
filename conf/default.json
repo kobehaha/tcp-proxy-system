@@ -8,7 +8,7 @@
     "requestqueuesize": 500,
     "maxprocessor": 2,
     "heartbeat": 5000,
-    "strategy": "random",
+    "strategy": "iphash",
     "logfile": "/Users/kobe/Documents/go/proxy/logs",
     "backends": [
      {

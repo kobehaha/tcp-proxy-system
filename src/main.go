@@ -40,7 +40,7 @@ func main() {
 func init_log(config *config.Config) {
 	// log
 	logfile := config.LogFile
-	fmt.Println("logfile = %s", logfile)
+	fmt.Println("logfile = ", logfile)
 	if logfile == "" {
 		log.Init(DefaultLogName, DefaultLogFileLocation)
 	} else {

@@ -19,6 +19,7 @@ type Strategy interface {
 //init
 func init() {
 	register[RandomName] = new(Random)
+	register[IpHashName] = new(IpHash)
 }
 
 //description
