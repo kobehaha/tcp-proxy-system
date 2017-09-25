@@ -25,7 +25,8 @@ type ProxyServer struct {
 	listener         net.Listener
 	requestqueuesize int
 	on               bool
-	proxy            *proxy.TcpProxy
+	//proxy            *proxy.Proxy
+	proxy            proxy.Proxy
 }
 
 // description
@@ -44,7 +45,9 @@ func (server *ProxyServer) Init(config *config.Config) {
 // descritpion
 // set proxy
 func (server *ProxyServer) setProxy(config *config.Config) {
-	server.proxy = &proxy.TcpProxy{}
+	// implement interface instead
+	//server.proxy = &proxy.TcpProxy{}
+	server.proxy = new(proxy.TcpProxy)
 	server.proxy.Init(config)
 }
 

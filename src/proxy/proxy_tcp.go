@@ -14,7 +14,7 @@ const (
 	DefaultTimeoutTime = 3
 )
 
-// description
+// description/
 // tcp proxy
 type TcpProxy struct {
 	// data *ProxyData
