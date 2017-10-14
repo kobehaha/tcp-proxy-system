@@ -22323,3 +22323,6 @@ nõ%fÈ_GÓÖÌ‹{x—:²Žs×­y•²Ì3¤éÆ	|º‘ÅÕæRrlƒÅ:¬:!K¯±4×R‹&>UÇb{u<µía°þÝÚö±ããñßTŠ|·
 2017/10/14 21:18:10 server.go:69: start server and server address is :1001
 2017/10/14 21:18:10 server.go:76: proxy server start ok
 2017/10/14 21:18:15 proxy_tcp.go:152: clean backendUrl which is not available ----->  192.168.33.19:8000
+2017/10/14 21:23:01 server.go:99: proxy stop success
+2017/10/14 21:23:01 server.go:110: proxy recevie stop signal
+2017/10/14 21:23:01 server.go:87: client connect server error:

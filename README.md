@@ -7,17 +7,18 @@ simple tcp proxy for server
 
 ## Overview
 
-Tcp-proxy is a high-performance proxy for tcp layer by Go, Just like other tcp proxy such as nginx, haproxy. you can use it to split your traffic to a few backends. Tcp aims to simplify the tcp-proxy solution of Proxy.
+Tcp-proxy is a high-performance proxy for tcp layer by Go, Just like other tcp proxy such as nginx, haproxy. you can use it to split your traffic to a few backends. Tcp-proxy aims to simplify the tcp-proxy solution of Proxy.
 
 ## Feature 
 
 ### 1 Basic Function
-- request count limit 
-- custom load balance algorithm
-- dynamic checking backend by heartbeat service
+- Support limiting the max count of connections to proxy 
+- Support custom load balance algorithm
+- Support dynamic checking backend by heartbeat service
 
 ### 2. Automatic Function
-- dynamic add/remove backend without restarting proxy [doing]
+- Dynamic add/remove backend without restarting or chaning config of proxy [doing]
+- Client's ip ACL control [doing]
 
 
 ## Install
