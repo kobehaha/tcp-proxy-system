@@ -5,9 +5,10 @@ import (
 	"./log"
 	"./server"
 	"./util"
-	"fmt"
+	"flag"
 	"path/filepath"
 	"runtime"
+	"strings"
 )
 
 // description
@@ -22,16 +23,26 @@ const (
 // main
 func main() {
 
-	//log.Println("prepare to start server")
-	path := util.DefaultPath()
-	// log.Println("homt path ---->" ,  path)
-	config, err := config.Load(filepath.Join(path, DefaultConfigFile))
-	init_log(config)
+	var cmdConfigFile string
+	var configInfo *config.Config
+	var err interface{}
+	var defaultPath string
+
+	flag.StringVar(&cmdConfigFile, "conf", DefaultConfigFile, "--conf config path location")
+	flag.Parse()
+
+	if strings.Compare(cmdConfigFile, DefaultConfigFile) == 0 {
+		defaultPath = util.DefaultPath()
+		configInfo, err = config.Load(filepath.Join(defaultPath, DefaultConfigFile))
+	} else {
+		configInfo, err = config.Load(cmdConfigFile)
+	}
+	init_log(configInfo)
 
 	if err == nil {
-		runtime.GOMAXPROCS(config.MaxProcessor)
+		runtime.GOMAXPROCS(configInfo.MaxProcessor)
 		proxy := &server.ProxyServer{}
-		proxy.Init(config)
+		proxy.Init(configInfo)
 		proxy.WatchStopSignal()
 		proxy.Start()
 	}
@@ -40,7 +51,6 @@ func main() {
 func init_log(config *config.Config) {
 	// log
 	logfile := config.LogFile
-	fmt.Println("logfile = ", logfile)
 	if logfile == "" {
 		log.Init(DefaultLogName, DefaultLogFileLocation)
 	} else {

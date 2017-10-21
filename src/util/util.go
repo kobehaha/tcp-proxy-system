@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"strconv"
-    "strings"
+	"strings"
 )
 
 // description
@@ -50,6 +50,7 @@ func DefaultPath() string {
 func UrlToHost(url string) string {
 	return strings.Split(url, ":")[0]
 }
+
 // description
 // ipv4---> int
 func IP4ToInt(ip string) int {

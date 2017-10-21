@@ -9,7 +9,7 @@
     "maxprocessor": 2,
     "heartbeat": 5000,
     "strategy": "iphash",
-    "logfile": "/Users/kobe/Documents/go/proxy/logs",
+    "logfile": "/tmp/logs",
     "backends": [
      {
         "host": "192.168.33.19",
