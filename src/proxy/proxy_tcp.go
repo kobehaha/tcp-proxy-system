@@ -47,6 +47,7 @@ func (proxy *TcpProxy) isBackendAvailable() bool {
 // dispatch
 func (proxy *TcpProxy) Dispatch(con net.Conn, requestqueuesize int) {
 
+	log.Println("current request sie ----> ", proxy.data.getRequestSrcLen)
 	// compare channalManager count
 	if proxy.data.getRequestSrcLen() >= requestqueuesize {
 		// need to add ---> requesting queue | channel notify
