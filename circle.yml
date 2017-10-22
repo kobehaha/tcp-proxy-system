@@ -10,7 +10,6 @@ machine:
     GITHUB_PROJECT_USERNAME: kobehaha
     GITHUB_PROJECT_REPONAME: tcp-proxy-system
   post:
-    - git clone https://github.com/kobehaha/tcp-proxy-system.git
     - cd tcp-proxy-system
     - cp conf/
     - make || cp bin/proxyd /usr/bin/proxyd
