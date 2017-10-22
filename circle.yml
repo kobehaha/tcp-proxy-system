@@ -34,4 +34,4 @@ deployment:
        # - ./deploy_staging.sh
        - cd $HOME/$GITHUB_PROJECT_REPONAME && make
        - /usr/bin/proxyd -conf=/etc/proxy.json &
-       - netstat -lntp
+       - sudo netstat -lntp
