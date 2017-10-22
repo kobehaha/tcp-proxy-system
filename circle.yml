@@ -10,10 +10,13 @@ machine:
     GITHUB_PROJECT_USERNAME: kobehaha
     GITHUB_PROJECT_REPONAME: tcp-proxy-system
   post:
+    - pwd
     - cd tcp-proxy-system
+    - pwd
     - ls
     - pwd
     - cd tcp-proxy-system
+    - pwd
     - sudo cp conf/default.json /etc/proxy.json
     - make || cp bin/proxyd /usr/bin/proxyd
 
