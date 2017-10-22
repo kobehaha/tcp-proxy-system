@@ -75,9 +75,9 @@ func Load(filename string) (*Config, error) {
 		config.LogFile = DefaultLogFile
 		log.Println("success load default config parameter LogFile", config.LogFile)
 	}
-	if config.DefaultProtocal == "" {
-		config.DefaultProtocal = DefaultProtocal
-		log.Println("success load default config parameter Protocal", config.DefaultProtocal)
+	if config.Protocal == "" {
+		config.Protocal = DefaultProtocal
+		log.Println("success load default config parameter Protocal", config.Protocal)
 	}
 
 	log.Println("success load config file:", filename)

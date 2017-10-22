@@ -3,14 +3,15 @@ go:
     - 1.8
     - 1.7.3
     - 1.6
-sudo: true 
+sudo: true
 
-before_install:  
+before_install:
     - touch /tmp/install.log
+    - touch /tmp/logs
 script:
     - which go
     - ls -l
-    - make 
+    - make
 
 matrix:
   fast_finish: true

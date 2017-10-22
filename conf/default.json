@@ -1,7 +1,7 @@
 {
 
     "service": "proxy for tcp protocal, just as mysql , http ... ",
-    "ip": "127.0.0.1",
+    "host": "127.0.0.1",
     "port": 1001,
     "keepalive": 20,
     "protocol": "tcp",
