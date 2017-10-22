@@ -9,6 +9,7 @@ machine:
   environment:
     GITHUB_PROJECT_USERNAME: kobehaha
     GITHUB_PROJECT_REPONAME: tcp-proxy-system
+
   post:
     - sudo cp $HOME/$GITHUB_PROJECT_REPONAME/conf/default.json /etc/proxy.json
     - cd $HOME/$GITHUB_PROJECT_REPONAME && make
@@ -32,3 +33,5 @@ deployment:
     commands:
        # - ./deploy_staging.sh
        - cd $HOME/$GITHUB_PROJECT_REPONAME && make
+       - /usr/bin/proxyd -conf=/etc/proxy.json &
+       - netstat -lntp
