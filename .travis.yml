@@ -7,7 +7,7 @@ sudo: true
 
 before_install:
     - touch /tmp/install.log
-    - touch /tmp/logs
+    - mkdir /tmp/logs
 script:
     - which go
     - ls -l

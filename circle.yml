@@ -1,0 +1,35 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  go:
+    Version: 1.8.3
+  hosts:
+    circlehost: 127.0.0.1
+    dev.kobehaha.com: 127.0.0.1
+  environment:
+    GITHUB_PROJECT_USERNAME: kobehaha
+    GITHUB_PROJECT_REPONAME: tcp-proxy-system
+  post:
+    - git clone https://github.com/kobehaha/tcp-proxy-system.git
+    - cd tcp-proxy-system
+    - cp conf/
+    - make || cp bin/proxyd /usr/bin/proxyd
+
+dependences:
+  pre:
+    - sudo apt-get update
+
+test:
+  post:
+    - make test
+
+compile:
+  override:
+    - make
+
+deployment:
+  staging:
+    branch: master
+    commands:
+       # - ./deploy_staging.sh
+       - make
