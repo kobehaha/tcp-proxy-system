@@ -13,6 +13,7 @@ machine:
     - cd tcp-proxy-system
     - ls
     - pwd
+    - cd tcp-proxy-system
     - sudo cp conf/default.json /etc/proxy.json
     - make || cp bin/proxyd /usr/bin/proxyd
 
