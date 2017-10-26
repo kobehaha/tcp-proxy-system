@@ -25,7 +25,6 @@ type ProxyServer struct {
 	listener         net.Listener
 	requestqueuesize int
 	on               bool
-	//proxy            *proxy.Proxy
 	proxy            proxy.Proxy
 }
 
@@ -33,8 +32,6 @@ type ProxyServer struct {
 // init
 func (server *ProxyServer) Init(config *config.Config) {
 	server.on = false
-	//server.host = "127.0.0.1"
-	//server.port = 1000
 	server.host = config.Host
 	server.port = config.Port
 	server.beattime = config.Heartbeat

@@ -13,7 +13,7 @@ const (
 	DefaultService      string = "Default Service: tcp proxy"
 	DefaultStrategy     string = "iphash"
 	DefaultMaxProcessor int    = 2
-	DefaultHeartbeat    int    = 50000
+	DefaultHeartbeat    int    = 5000
 	DefaultLogFile      string = "/tmp/logs"
 	DefaultProtocal     string = "tcp"
 )
