@@ -47,7 +47,7 @@ func (proxy *TcpProxy) isBackendAvailable() bool {
 // dispatch
 func (proxy *TcpProxy) Dispatch(con net.Conn, requestqueuesize int) {
 
-	log.Println("current request sie ----> ", proxy.data.getRequestSrcLen)
+	log.Println("current request size ----> ", proxy.data.getRequestSrcLen())
 	// compare channalManager count
 	if proxy.data.getRequestSrcLen() >= requestqueuesize {
 		// need to add ---> requesting queue | channel notify
@@ -61,7 +61,7 @@ func (proxy *TcpProxy) Dispatch(con net.Conn, requestqueuesize int) {
 		//servers := []string{"192.168.33.19:8000"}
 		//servers := []string{"127.0.0.1:21288"}
 		servers := proxy.data.BackendUrls()
-		log.Println("servers----> ", servers)
+		log.Println("servers------> | ", servers)
 		// set static ---> change dynamic
 		url := proxy.strategy.Choose(con.RemoteAddr().String(), servers)
 		proxy.transfer(con, url)
@@ -111,7 +111,7 @@ func (proxy *TcpProxy) safeCopy(from net.Conn, to net.Conn, sync chan int) {
 			sync <- 1
 			break
 		}
-		log.Println("read:", string(buf[:n]))
+		//log.Println("read:", string(buf[:n]))
 		// check --> byte
 		to.Write(buf)
 		log.Println("write:--->")
