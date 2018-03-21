@@ -1,9 +1,9 @@
 package server
 
 import (
-	"../config"
-	"../proxy"
-	"../util"
+	"github.com/kobehaha/tcp-proxy-system/config"
+	"github.com/kobehaha/tcp-proxy-system/proxy"
+	"github.com/kobehaha/tcp-proxy-system/util"
 	"log"
 	"net"
 	"os"

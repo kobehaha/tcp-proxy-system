@@ -1,7 +1,7 @@
 package strategy
 
 import (
-	"../../util"
+	"github.com/kobehaha/tcp-proxy-system/util"
 )
 
 type IpHash struct {

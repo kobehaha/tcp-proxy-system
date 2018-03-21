@@ -1,16 +1,17 @@
 package main
 
 import (
-	"./config"
-	"./hack"
-	"./log"
-	"./server"
-	"./util"
 	"flag"
 	"fmt"
 	"path/filepath"
 	"runtime"
 	"strings"
+	"github.com/kobehaha/tcp-proxy-system/config"
+	"github.com/kobehaha/tcp-proxy-system/hack"
+	"github.com/kobehaha/tcp-proxy-system/log"
+	"github.com/kobehaha/tcp-proxy-system/server"
+	"github.com/kobehaha/tcp-proxy-system/util"
+
 )
 
 // description

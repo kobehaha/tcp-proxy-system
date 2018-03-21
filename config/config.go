@@ -1,10 +1,10 @@
 package config
 
 import (
-	"../system"
 	"encoding/json"
 	"log"
 	"os"
+	"github.com/kobehaha/tcp-proxy-system/system"
 )
 
 const (

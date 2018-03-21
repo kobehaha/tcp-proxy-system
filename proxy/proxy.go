@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	"../config"
 	"net"
+	"github.com/kobehaha/tcp-proxy-system/config"
 )
 
 //description

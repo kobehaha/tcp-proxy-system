@@ -11,11 +11,11 @@ endif
 
 PREFIX   := /usr/local/
 CUREDIR  := $(shell pwd)
-BINDIR   := ${CUREDIR}/bin
+BINDIR   := ${CUREDIR}/bin/
 PROJECT  := proxyd 
 GO       := go
 CPU_COUNT := 2
-GOMAIN   := src/main.go
+GOMAIN   := main.go
 GOBUILD  := GOPATH=$(CUREDIR):$(GOPATH) CGO_ENABLED=0 $(GO) build -v -x -p $(CPU_COUNT)  -o $(PROJECT)  $(GOMAIN) 
 
 ## other 

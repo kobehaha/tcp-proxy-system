@@ -1,9 +1,9 @@
 package proxy
 
 import (
-	"../config"
-	"../system"
 	"sync"
+	"github.com/kobehaha/tcp-proxy-system/system"
+	"github.com/kobehaha/tcp-proxy-system/config"
 )
 
 // description

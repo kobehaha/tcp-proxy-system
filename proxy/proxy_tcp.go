@@ -1,12 +1,13 @@
 package proxy
 
 import (
-	"../config"
-	"../system"
-	"./strategy"
 	"log"
 	"net"
 	"time"
+	"github.com/kobehaha/tcp-proxy-system/proxy/strategy"
+	"github.com/kobehaha/tcp-proxy-system/config"
+	"github.com/kobehaha/tcp-proxy-system/system"
+
 )
 
 const (
