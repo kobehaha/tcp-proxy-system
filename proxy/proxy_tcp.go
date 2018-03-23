@@ -7,6 +7,7 @@ import (
 	"github.com/kobehaha/tcp-proxy-system/proxy/strategy"
 	"github.com/kobehaha/tcp-proxy-system/config"
 	"github.com/kobehaha/tcp-proxy-system/system"
+	"io"
 
 )
 
@@ -83,7 +84,7 @@ func (proxy *TcpProxy) transfer(local net.Conn, remote string) {
 		log.Println("connect to endpint error:  ", err)
 		return
 	}
-	sync := make(chan int, 1)
+	sync := make(chan int, 2)
 	channel := system.Channel{SrcConnection: local, DstConnection: remoteConn}
 	// set client 3 minite for upating , force close
 	local.SetReadDeadline(time.Now().Add(time.Minute * 3))
@@ -100,28 +101,32 @@ func (proxy *TcpProxy) transfer(local net.Conn, remote string) {
 // method 1 ----> parse byte from conn ---| for more designer, I choose method 1
 // method 2 ----> just use io.Copy(from, to)
 func (proxy *TcpProxy) safeCopy(from net.Conn, to net.Conn, sync chan int) {
-	// method 1
-	for {
-		buf := make([]byte, 512)
-		n, err := from.Read(buf)
-		if err != nil {
-			log.Println("read error---------->:", err)
-			break
-		}
-		if n == 0 {
-			sync <- 1
-			break
-		}
-		//log.Println("read:", string(buf[:n]))
-		// check --> byte
-		to.Write(buf)
-		log.Println("write:--->")
-	}
+
+    //todo with method 1 not support mysql-proxy(tcp) bugs need fix
+	//method 1
+	//for {
+	//	buf := make([]byte, 512)
+	//	n, err := from.Read(buf)
+	//	if err != nil {
+	//		log.Println("read error---------->:", err)
+	//		break
+	//	}
+	//	to.Write(buf)
+	//	if n == 0 {
+	//		sync <- 1
+	//		log.Println("result is 00000 ---------->:", err)
+     //       break
+	//	}
+	//	log.Println("read:", string(buf[:n]))
+	//	// check --> byte
+	//	log.Println("write:--->")
+	//}
 
 	// method 2
-	//   io.Copy(from, to)
+    // success to proxy mysql(tcp)
+	io.Copy(from, to)
 	// check --> byte
-
+    sync <- 1
 	defer from.Close()
 	//sync <- 1
 
